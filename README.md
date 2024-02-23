@@ -10,19 +10,21 @@ Individual-level dataset linkages could enable researchers to deduplicate subjec
 
 NICHD ODSS is developing a robust metadata schema for data governance information relevant to linking individual-level participant data and sharing and using linked datasets. This effort aligns with NICHD ODSS’s larger goal of developing a governance and technology strategy for implementing individual-level record linkage for pediatric research, driven by pediatric COVID-19 research use cases. The NICHD ODSS-developed data governance metadata schema will contribute to NIH-wide strategic goals and activities on Controlled Data Access Coordination (CDAC). To serve NIH-wide priorities, NICHD ODSS will develop a prototype data governance metadata search and visualization tool and underlying database that will inform researchers how datasets of interest can be linked and used. The overall goal is to provide researchers and other stakeholders with high-quality information they can use to determine whether certain datasets can be linked, and if they can be, what rules and controls apply to the linked dataset.
 
-In order to develop a robust data governance metadata infrastructure, unstructured text, often stored in a narrative format within policy documents, data use agreements, and consent forms must be annotated with structured data through the application of a governance metadata schema. Standards, including ontologies, terminologies, vocabularies, schemas, and common data models, are the tools and methods to organize, codify, value, and annotate unstructured governance information into structured governance data that may be extensible and machine-readable. Future efforts may enrich the governance metadata schema with a rules engine and automation tools that calls upon the structured values within the metadata schema.
+To develop a robust data governance metadata infrastructure, unstructured text, often stored in a narrative format within policy documents, data use agreements, and consent forms must be annotated with structured data through the application of a governance metadata schema. Standards, including ontologies, terminologies, vocabularies, schemas, and common data models, are the tools and methods to organize, codify, value, and annotate unstructured governance information into structured governance data that may be extensible and machine-readable. Future efforts may enrich the governance metadata schema with a rules engine and automation tools that calls upon the structured values within the metadata schema.
+
+This repository describes the project undertaken to develop and test a data governance metadata schema and the resulting resources. 
 
 ## Project Materials
 
-This project is developing materials exploring approaches to help researchers and data stewards ensure that dataset linkages are appropriate:
+This project developed materials and resources to help researchers and data stewards ensure that dataset linkages are appropriate:
 
-* A [metadata schema](MetadataSchema) for data governance information relevant to linking individual-level participant data and sharing and using linked datasets.
+* A [metadata schema](MetadataSchema) to annotate data governance information relevant to accessing, sharing, linking, and using individual-level participant data.
 
 * A [landscape analysis](LandscapeAnalysis.md) that identifies existing governance-relevant standards that could be used in a data governance metadata schema.
 
-* A prototype data governance metadata collection tool to enable researchers to enter, store, and communicate consent, policy, regulatory, and other governance information as participant-level and dataset-level metadata through the life of a research project in a standard format.
+* A prototype data governance metadata collection tool to enable researchers to enter, store, and communicate dataset-level consent, policy, regulatory, and other governance information as metadata in a standard format and through the life of a research project.
 
-* A governance database for multiple NIH and HHS clinical and administrative datasets, providing structure and provenance for all dataset governance information regarding linkage and use of those data.
+* A governance relational database that encodes governance metadata from 11 HHS clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata.
 
 * A prototype data governance metadata search and visualization tool and underlying database that will inform researchers how datasets of interest can be linked and used.
 
