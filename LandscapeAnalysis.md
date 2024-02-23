@@ -24,7 +24,7 @@ By adopting a thoughtful and strategic approach to governance metadata schema de
 
 The Office of the Secretary Patient-Centered Outcomes Research Trust Fund funded this project as part of a portfolio of data capacity projects related to patient-centered outcomes research and data linkage, aligned with Goal 2, Data Standards and Linkages for Longitudinal Research, in the next decade’s strategic plan.
 
-Full report available here: <placeholder for link>.
+Full report available here: placeholder for link.
  
 Report citation: CMS Alliance to Modernize Healthcare (The Health FFRDC). Data Governance Metadata Standards: Landscape and Gap Analysis. Prepared under Contract No. 75N94023F00171. January 2024.
  
