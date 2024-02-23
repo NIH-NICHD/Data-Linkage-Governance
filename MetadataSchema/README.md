@@ -522,7 +522,7 @@ policy:
     profile: https://www.nichd.nih.gov/data_governance_odrl
     target: DATASET_A
     obligation:
-      - action: sign
+      - action: submit
         contractedParty: DataRequester
 ```
 ###  8.2. <a name='ExampleB:HealthCenterIRBauthorizesdatalinkageforDATASET_BdatarequestersmustobtainpermissionforlinkagefromHealthCenterIRB'></a>Example B: Health Center IRB authorizes data linkage for DATASET_B; data requesters must obtain permission for linkage from Health Center IRB 
@@ -557,6 +557,8 @@ policy:
         assignee: DataRequester
         duty:
          - action: sign
+            assigner: PrincipalInvestigator 
+            assignee: DataRequester
 
 ```
 ###  8.4. <a name='ExampleD:ResearchnetworksitesauthorizelinkageforDATASET_Donastudy-by-studybasisdatarequestormustobtainpermissiontolinkdatasetsfromeachdatacontributingsite.'></a>Example D: Research network sites authorize linkage for DATASET_D on a study-by-study basis; data requestor must obtain permission to link datasets from each data contributing site  
