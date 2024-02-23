@@ -555,26 +555,29 @@ policy:
       - action: access
         assigner: PrincipalInvestigator 
         assignee: DataRequester
+        duty:
+         - action: sign
+
 ```
 ###  8.4. <a name='ExampleD:ResearchnetworksitesauthorizelinkageforDATASET_Donastudy-by-studybasisdatarequestormustobtainpermissiontolinkdatasetsfromeachdatacontributingsite.'></a>Example D: Research network sites authorize linkage for DATASET_D on a study-by-study basis; data requestor must obtain permission to link datasets from each data contributing site  
 ```yaml
 policy: 
-  - type: OptInParticipation
+  - type: Process
     title: DATASET_D Linkage Study Participation Policy
     uid: DATASET_DLinkageStudyParticipationPolicy
     profile: https://www.nichd.nih.gov/data_governance_odrl
-    target: DATASET_DLimitedDataSet
+    target: DATASET_D
     permission:
       - action: link
         duty:
-         - action: obtainConsent
-           consentingParty: DataContributor
+         - action: obtainApproval
+           consentingParty: DataProvider
            consentedParty: DataRequester
 ```
 ###  8.5. <a name='ExampleE:GrantofConfidentialityfromtheU.S.DepartmentofJusticeprohibitsreidentificationofindividualsinDATASET_E'></a>Example E: Grant of Confidentiality from the U.S. Department of Justice prohibits reidentification of individuals in DATASET_E 
 ```yaml
 policy: 
-  - type: Set 
+  - type: Certificate 
     title: Grant of Confidentiality from the U.S. Department of Justice 
     uid: GrantOfConfidentialityFromTheUSDepartmentOfJustice 
     profile: https://www.nichd.nih.gov/data_governance_odrl 
@@ -592,7 +595,7 @@ policy:
     target: DATASET_F
     permission:
       - action: share
-        assigner: child
+        assigner: MinorParticipant
         assignee: PrincipalInvestigator
         constraint:
          - leftOperand: product
