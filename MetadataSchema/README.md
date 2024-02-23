@@ -57,7 +57,7 @@ These resources have been developed to support data providers, data stewards, re
 
 ##  3. <a name='MetadataSchemaDescription'></a>Metadata Schema Description
 The metadata schema is a structured framework that outlines technical rules and conventions to create, provide, maintain, and use data governance metadata. 
-This schema was developed based on a comprehensive landscape analysis of existing governance-relevant standards, including ontologies, terminologies, vocabularies, schemas, and common data models (**TODO: ADD LINK TO LANDSCAPE REPORT**). This analysis identified [Open Digital Rights Language (ODRL) information model](https://www.w3.org/TR/odrl-model/) as the information model and basis for the schema design. 
+This schema was developed based on a comprehensive [landscape analysis](../LandscapeAnalysis.md) of existing governance-relevant standards, including ontologies, terminologies, vocabularies, schemas, and common data models. This analysis identified [Open Digital Rights Language (ODRL) information model](https://www.w3.org/TR/odrl-model/) as the information model and basis for the schema design.
 
 ```mermaid
 ---
