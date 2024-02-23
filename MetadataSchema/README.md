@@ -62,22 +62,9 @@ This schema was developed based on a comprehensive [landscape analysis](../Lands
 ```mermaid
 ---
 title: Open Digital Rights Language (ODRL) Information Model Overview
-config:
-  theme: base
-  themeVariables:
-    noteTextColor: "#BB2528"
-    noteBkgColor: "#00ff00"
-    noteBorderColor: "#BB2528"
 ---
-classDiagram %%{
-    init: {
-        'theme': 'base',
-        'themeVariables': {
-        'noteBorderColor': '#BB2528',
-        'noteTextColor': '#BB2528',
-        }
-    }
-    }%%
+
+classDiagram 
     direction RL
 
     class Policy {
@@ -111,7 +98,6 @@ classDiagram %%{
     Policy "1" --> "0..*" Policy :inheritFrom
 
     Rule "1" *-- "0..*" Rule : (failure)\n\nduty\nremedy
-
 ```
 
 The Open Digital Rights Language (ODRL) is a versatile policy articulation language that offers an adaptable and interoperable data model, vocabulary, and encoding systems for expressing statements about the utilization of content and services. The foundational elements for the semantics of the ODRL policies are outlined in the ODRL Information Model, which details the core concepts, entities, and relationships. _Policies_ are made up of _rules_ which are employed to denote permitted (allowed) and prohibited (forbidden) _actions_ on a specific _asset_, as well as the responsibilities that stakeholders are required to fulfill (i.e., obligations). Furthermore, _rules_ can be subject to _constraints_ (e.g., locations of data access) and duties (such as obtaining approvals) that can be imposed on permissions. This system of rules and constraints serves as an ideal basis for governance metadata schema development, and a useful representation of relevant policies, rules, parties, and constraints. Further information on ODRL can be found [here](https://www.w3.org/TR/odrl-model/). 
