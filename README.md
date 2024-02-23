@@ -18,6 +18,8 @@ This project is developing materials exploring approaches to help researchers an
 
 * A [metadata schema](MetadataSchema) for data governance information relevant to linking individual-level participant data and sharing and using linked datasets.
 
+* A [landscape analysis](LandscapeAnalysis.md) that identifies existing governance-relevant standards that could be used in a data governance metadata schema.
+
 * A prototype data governance metadata collection tool to enable researchers to enter, store, and communicate consent, policy, regulatory, and other governance information as participant-level and dataset-level metadata through the life of a research project in a standard format.
 
 * A governance database for multiple NIH and HHS clinical and administrative datasets, providing structure and provenance for all dataset governance information regarding linkage and use of those data.
