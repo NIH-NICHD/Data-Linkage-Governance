@@ -569,14 +569,14 @@ policy:
     uid: DATASET_ADesignatedAgentForm
     profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
     target: DATASET_A
-    obligation:
+    duty:
       - action: submit
         contractedParty: DataRequester
 ```
 ###  8.2. <a name='ExampleB:HealthCenterIRBauthorizesdatalinkageforDATASET_BdatarequestersmustobtainpermissionforlinkagefromHealthCenterIRB'></a>Example B: Health Center IRB authorizes data linkage for DATASET_B; data requesters must obtain permission for linkage from Health Center IRB 
 ```yaml
 policy: 
-  - type: Agreement 
+  - type: Agreement - IRB Documentation 
     title: DATASET_B IRB Policy 
     uid: DATASET_BIrbPolicy 
     profile: https://github.com/NIH-NICHD/Data-Linkage-Governance 
@@ -603,9 +603,8 @@ policy:
       - action: access
         assigner: PrincipalInvestigator 
         assignee: DataRequester
-        duty:
+        obligation:
          - action: sign
-            assigner: PrincipalInvestigator 
             assignee: DataRequester
 
 ```
