@@ -110,95 +110,12 @@ The schema Unified Modeling Language (UML) diagram provides a visual representat
 ```mermaid
 ---
 title: Governance Metadata UML
-config:
-  theme: base
-  themeVariables:
-    noteTextColor: "#BB2528"
-    noteBkgColor: "#00ff00"
-    noteBorderColor: "#BB2528"
 ---
-classDiagram %%{
-  init: {
-    'theme': 'base',
-    'themeVariables': {
-      'noteBorderColor': '#BB2528',
-       'noteTextColor': '#BB2528',
-    }
-  }
-}%%
-direction LR
 
-namespace  Data_Governance_Profile {
+classDiagram 
+  direction LR
 
-    class GovernancePolicy{
-        <<Enumeration>>
-        Consent
-        DataUseAgreement  
-        ResponsibleUseOfData     
-    }
-
-    class GovernanceParty{
-        <<Enumeration>>
-        InstitutionalReviewBoard
-        DataSteeringCommittee
-        DataRequester
-        StudySite
-    }
-
-    class Dataset {
-        <<Asset>>
-        dc:source
-        dc:publisher
-        dc:type
-        dc:creator
-        dc:contributor
-    }
-
-    class GovernanceAction{
-        <<enumaration>>
-        Link
-        Sign
-        Collect
-    }
-
-    class GovernanceRightOperand{
-        <<enumaration>>
-        DataEnclave
-        AcademicResearch
-        ApprovedPurpose
-        LimitedDataset
-        SafeHarbor
-    }
-
-    class GovernanceLeftOperand{
-        <<enumaration>>
-        DeidentificationMethod 
-    }
-
-    class PIIElements {
-        <<enumaration>>
-        Names
-        GeographicData
-        Dates
-        PhoneNumbers
-        FaxNumbers
-        EmailAddresses
-        SocialSecurityNumbers
-        MedicalRecordNumbers
-        HealthPlanBeneficiaryNumbers
-        AccountNumbers
-        CertificateLicenseNumbers
-        VehicleIdentifiersAndSerialNumbers
-        DeviceIdentifiersAndSerialNumbers
-        URLs
-        IPAddresses
-        BiometricIdentifiers
-        FullFacePhotosAndAnyComparableImages
-        AnyOtherUniqueIdentifyingNumberOrCode
-    }
-}
-
-namespace Policies {
+%%namespace Policies {
     class Policy {
         <<abstract>>
         IRI uid
@@ -226,29 +143,28 @@ namespace Policies {
     class Agreement {
         <<Policy>>
     }
-}
+%%}
 
-namespace Assets {
+%%namespace Assets {
     class Asset {
         IRI uid
-        %% When hasPolicy has been asserted between a metadata expression and an ODRL Policy, the Asset being identified MUST be inferred to be the target Asset of all the Rules of that Policy. If there are multiple Rules in the Policy, then the inferred Asset will be the target Asset to every Rule in the Policy.
     }
 
     class AssetCollection{
         IRI source
     }
-}
+%%}
 
-namespace Parties {
+%%namespace Parties {
     class Party{
         IRI uid
     }
 
     class PartyCollection{
     }
-}
+%%}
 
-namespace Rules {
+%%namespace Rules {
     class Rule {
         <<abstract>>
         -- profile --
@@ -264,7 +180,7 @@ namespace Rules {
         <<Rule>>
     }
 
-}
+%%}
 
 class Action {
     <<enumeration>>
@@ -281,13 +197,11 @@ class Action {
     Aggregate
 }
 
-namespace Constraints {
+%%namespace Constraints {
     class Constraint {
         IRI uid
         DataType dataType
         Unit unit
-        %% The status provides a value generated from the leftOperand action that MUST be used in the comparison expression. 
-        %% Status status
     }
 
     class LogicalConstraint {
@@ -305,7 +219,7 @@ namespace Constraints {
     class RightOperand {
         %% RightOperand properties
     }
-}
+%%}
 
 
 Policy <|-- Set : subClasss
@@ -341,20 +255,151 @@ Constraint "1" --* "1" Operator : operator
 Constraint "1" --* "1" RightOperand : rightOperand
 LogicalConstraint "1" --* "2..*" Constraint : or\nxone\nand\nandSequence
 
+```
+
+```mermaid
+---
+title: Governance Metadata Profile UML
+---
+
+classDiagram 
+  direction TB
+
+%% namespace  Data_Governance_Profile {
+
+    class GovernanceAgreementPolicy{
+        <<Enumeration>>
+        Certification
+        Consent 
+        Contract
+        Data Use Agreement
+        Determination    
+    }
+
+
+    class GovernanceSetPolicy{
+        <<Enumeration>>
+        IRBDocumentation
+        Law regulations and statutes
+        Policy
+        Privacy Board Documentation
+        Process    
+    }
+
+    class GovernanceParty{
+        <<Enumeration>>
+        Certification Organization
+        Data Access Committee
+        Data Coordinating Center
+        Data Provider
+        Data Repository
+        Data Requester
+        Disclosure Review Body
+        Government Organization
+        Guardian
+        Institutional Review Board
+        Minor Participant
+        Participant
+        Principal Investigator
+        Privacy Board
+        Review Committee
+    }
+
+    class Dataset {
+        <<Asset>>
+        dc:source
+        dc:publisher
+        dc:type
+        dc:creator
+        dc:contributor
+    }
+
+    class GovernanceAction{
+        <<enumaration>>
+        Access
+        Approve
+        Classify
+        Collect
+        Complete Training
+        Deidentify 
+        Link
+        Make Determination
+        Obtain Approval
+        Reidentify
+        Research Use
+        Secondary Link
+        Sign
+        Submit
+    }
+
+    class GovernanceRightOperand{
+        <<enumaration>>
+        Academic Research
+        Approved Purpose
+        Controlled Access
+        Data Enclave
+        Limited Dataset
+        Safe Harbor Method
+        Deidentified Dataset
+    }
+
+    class GovernanceLeftOperand{
+        <<enumaration>>
+        Access Path
+        Consent Requirement
+        Data Requester
+        Deidentification Method
+        Linkage Method
+    }
+
+    class PIIElements {
+        <<enumaration>>
+        Names
+        GeographicData
+        Dates
+        PhoneNumbers
+        FaxNumbers
+        EmailAddresses
+        SocialSecurityNumbers
+        MedicalRecordNumbers
+        HealthPlanBeneficiaryNumbers
+        AccountNumbers
+        CertificateLicenseNumbers
+        VehicleIdentifiersAndSerialNumbers
+        DeviceIdentifiersAndSerialNumbers
+        URLs
+        IPAddresses
+        BiometricIdentifiers
+        FullFacePhotosAndAnyComparableImages
+        AnyOtherUniqueIdentifyingNumberOrCode
+    }
+%%}
+
 %% ODRL profile relations
 GovernanceAction ..|> Action : extends
-GovernancePolicy ..|> Policy : extends
+GovernanceAgreementPolicy ..|> Agreement : extends
+GovernanceSetPolicy ..|> Set : extends
+Policy <|-- Set : subClasss
+Policy <|-- Agreement : subClass
 GovernanceParty ..|> Party : extends
 GovernanceRightOperand ..|> RightOperand : extends
 GovernanceLeftOperand ..|> LeftOperand : extends
 Dataset ..|> Asset : extends
 Dataset "1" --* "0..*" PIIElements : contains
 
+```
 
-%%note "An ODRL Profile explicitly serves community needs by specifying the vocabulary terms they require to be\n supported in ODRL policy expressions. These terms may be defined explicitly or may be adopted from the ODRL Common Vocabulary."
+##  5. <a name='SchemaRelationships'></a>Schema Relationships
 
+```mermaid
+---
+title: Governance Metadata UML
+---
 
-namespace Relationship Legend {
+classDiagram 
+  direction LR
+
+%%namespace Relationship Legend {
     class classA {
     }
     class classB {
@@ -389,7 +434,7 @@ namespace Relationship Legend {
     }
     class classP {
     }
-}
+%%}
 
     classA --|> classB : Inheritance
     classC --* classD : Composition
@@ -400,10 +445,9 @@ namespace Relationship Legend {
     classM ..|> classN : Realization
     classO .. classP : Link(Dashed)
 
-
 ```
-##  5. <a name='SchemaRelationships'></a>Schema Relationships
-The legend in the schema above is used to illustrate the different types of relationships between classes in the UML diagram. Not all types of UML relationships are used in this version of the schema. Please note that these are general UML concepts and their specific interpretation can vary based on the context of the diagram.
+
+The diagram above is used to illustrate the different types of relationships between classes in the UML diagram. Not all types of UML relationships are used in this version of the schema. Please note that these are general UML concepts and their specific interpretation can vary based on the context of the diagram.
 
 1.	**Inheritance (--|>):** Represents a relationship between two classes where one class (the subclass) inherits from another class (the superclass). In the legend, classA is a subclass of classB.
 2.	**Composition (--*):** Represents a type of association that represents a part-whole or part-of relationship. In the legend, classC is composed of classD
