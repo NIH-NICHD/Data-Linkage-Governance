@@ -621,8 +621,8 @@ policy:
       - action: link
         duty:
          - action: obtainApproval
-           consentingParty: DataProvider
-           consentedParty: DataRequester
+            approvingParty: DataProvider
+            approvedParty: DataRequester
 ```
 ###  8.5. <a name='ExampleE:GrantofConfidentialityfromtheU.S.DepartmentofJusticeprohibitsreidentificationofindividualsinDATASET_E'></a>Example E: Grant of Confidentiality from the U.S. Department of Justice prohibits reidentification of individuals in DATASET_E 
 ```yaml
@@ -650,7 +650,7 @@ policy:
         constraint:
          - leftOperand: product
            operator: eq
-           rightOperand: Deidentified
+           rightOperand: DeidentifiedDataset
 ```
 ##  9. <a name='ManagementofImplementationOverTime'></a>Management of Implementation Over Time
 
