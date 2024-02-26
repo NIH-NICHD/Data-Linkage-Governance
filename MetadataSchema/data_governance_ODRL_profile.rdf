@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://www.nichd.nih.gov/data_governance_odrl#"
-     xml:base="https://www.nichd.nih.gov/data_governance_odrl"
+<rdf:RDF xmlns="https://github.com/NIH-NICHD/Data-Linkage-Governance#"
+     xml:base="https://github.com/NIH-NICHD/Data-Linkage-Governance"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,8 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:data_governance_odrl="https://www.nichd.nih.gov/data_governance_odrl/">
-    <owl:Ontology rdf:about="https://www.nichd.nih.gov/data_governance_odrl">
+     xmlns:data_governance_odrl="https://github.com/NIH-NICHD/Data-Linkage-Governance/">
+    <owl:Ontology rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance">
         <owl:imports rdf:resource="https://www.w3.org/ns/odrl/2/ODRL22.rdf"/>
         <terms:license>Apache License, Version 2.0</terms:license>
         <rdfs:comment xml:lang="en">This ontology provides a profile for the ODRL 2.2 specification that is specific to data governance and management in the context of data linkage.</rdfs:comment>
@@ -48,9 +48,9 @@
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/metadata_creation_date -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/metadata_creation_date -->
 
-    <owl:AnnotationProperty rdf:about="https://www.nichd.nih.gov/data_governance_odrl/metadata_creation_date">
+    <owl:AnnotationProperty rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/metadata_creation_date">
         <rdfs:label>Metadata Creation Date</rdfs:label>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
     </owl:AnnotationProperty>
@@ -68,9 +68,9 @@
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/Consent -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Consent -->
 
-    <owl:Class rdf:about="https://www.nichd.nih.gov/data_governance_odrl/Consent">
+    <owl:Class rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Consent">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
         <rdfs:label>Consent</rdfs:label>
         <skos:definition>Consent by a patient to participation in a clinical study after achieving an understanding of the relevant medical facts and the risks involved.
@@ -81,9 +81,9 @@
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/DataUseAgreement -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataUseAgreement -->
 
-    <owl:Class rdf:about="https://www.nichd.nih.gov/data_governance_odrl/DataUseAgreement">
+    <owl:Class rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataUseAgreement">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
         <rdfs:label>Data Use Agreement</rdfs:label>
         <skos:definition>A Data Use Agreement (DUA) is a legal contract between the entity that owns access to a data source, typically a dataset or database, and a secondary entity that will receive the data, or a subset of it, for reuse. A DUA outlines terms and limitations on how the shared data can be used, and the secondary entity may need to meet certain criteria, such as their affiliated institution, their faculty status, and IRB approval for their research study. Examples of limitations include restricting access to the shared data, requiring that any research dissemination include citation of the data and its originating entity, requiring that data files are destroyed at the completion of research period, and restrictions on data use for commercial purposes. DUAs are frequently required for access to data that contain protected health information (PHI). 
@@ -94,9 +94,9 @@
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/Dataset -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Dataset -->
 
-    <owl:Class rdf:about="https://www.nichd.nih.gov/data_governance_odrl/Dataset">
+    <owl:Class rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Dataset">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
         <rdfs:label>Dataset</rdfs:label>
         <skos:definition>A collection of related data records.
@@ -119,9 +119,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/AcademicResearch -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/AcademicResearch -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/AcademicResearch">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/AcademicResearch">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
         <rdfs:label>Academic Research</rdfs:label>
@@ -131,9 +131,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/ApprovedPurpose -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/ApprovedPurpose -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/ApprovedPurpose">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/ApprovedPurpose">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
         <rdfs:label>Approved Purpose</rdfs:label>
@@ -141,9 +141,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/Collect -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Collect -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/Collect">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Collect">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
         <rdfs:label>Collect</rdfs:label>
@@ -151,9 +151,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/DataEnclave -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataEnclave -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/DataEnclave">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataEnclave">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
         <rdfs:label>Data Enclave</rdfs:label>
@@ -163,9 +163,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/DataRequester -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataRequester -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/DataRequester">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataRequester">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Data Requester</rdfs:label>
@@ -173,9 +173,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/DataSteeringCommittee -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataSteeringCommittee -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/DataSteeringCommittee">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataSteeringCommittee">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Data Steering Committee</rdfs:label>
@@ -183,9 +183,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/DeidentificationMethod -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentificationMethod -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/DeidentificationMethod">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentificationMethod">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
         <rdfs:label>Deidentification Method</rdfs:label>
@@ -193,9 +193,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/LimitedDataSet -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/LimitedDataSet -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/LimitedDataSet">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/LimitedDataSet">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
         <rdfs:label>Limited Data Set</rdfs:label>
@@ -203,9 +203,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/Link -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Link -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/Link">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Link">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
         <odrl:implies rdf:resource="http://www.w3.org/ns/odrl/2/aggregate"/>
@@ -219,9 +219,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/SafeHarbor -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarbor -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/SafeHarbor">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarbor">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
         <rdfs:label>Safe Harbor</rdfs:label>
@@ -229,9 +229,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/Sign -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Sign -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/Sign">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Sign">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
         <rdfs:label>Sign</rdfs:label>
@@ -240,9 +240,9 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://www.nichd.nih.gov/data_governance_odrl/StudySite -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/StudySite -->
 
-    <owl:NamedIndividual rdf:about="https://www.nichd.nih.gov/data_governance_odrl/StudySite">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/StudySite">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Study Site</rdfs:label>
@@ -259,14 +259,14 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
      -->
 
     <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/#constraintLeftOpCommon">
-        <skos:member rdf:resource="https://www.nichd.nih.gov/data_governance_odrl/DeidentificationMethod"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentificationMethod"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/#constraintRightOpCommon">
-        <skos:member rdf:resource="https://www.nichd.nih.gov/data_governance_odrl/AcademicResearch"/>
-        <skos:member rdf:resource="https://www.nichd.nih.gov/data_governance_odrl/ApprovedPurpose"/>
-        <skos:member rdf:resource="https://www.nichd.nih.gov/data_governance_odrl/DataEnclave"/>
-        <skos:member rdf:resource="https://www.nichd.nih.gov/data_governance_odrl/LimitedDataSet"/>
-        <skos:member rdf:resource="https://www.nichd.nih.gov/data_governance_odrl/SafeHarbor"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/AcademicResearch"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/ApprovedPurpose"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataEnclave"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/LimitedDataSet"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarbor"/>
     </rdf:Description>
     
 
@@ -288,8 +288,8 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
             <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Privacy"/>
             <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Request"/>
             <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Ticket"/>
-            <rdf:Description rdf:about="https://www.nichd.nih.gov/data_governance_odrl/Consent"/>
-            <rdf:Description rdf:about="https://www.nichd.nih.gov/data_governance_odrl/DataUseAgreement"/>
+            <rdf:Description rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Consent"/>
+            <rdf:Description rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataUseAgreement"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

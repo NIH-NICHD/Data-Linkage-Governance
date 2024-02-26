@@ -494,7 +494,7 @@ policy:
   - type: Agreement
     title: Data Access Agreement
     uid: DataAccessAgreement
-    profile: https://www.nichd.nih.gov/data_governance_odrl
+    profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
     target: DATASET_A
     permission:
       - action: access
@@ -505,7 +505,7 @@ policy:
   - type: Agreement
     title: DATASET_A Designated Agent Form
     uid: DATASET_ADesignatedAgentForm
-    profile: https://www.nichd.nih.gov/data_governance_odrl
+    profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
     target: DATASET_A
     obligation:
       - action: submit
@@ -517,7 +517,7 @@ policy:
   - type: Agreement 
     title: DATASET_B IRB Policy 
     uid: DATASET_BIrbPolicy 
-    profile: https://www.nichd.nih.gov/data_governance_odrl 
+    profile: https://github.com/NIH-NICHD/Data-Linkage-Governance 
     target: DATASET_B 
     permission: 
       - action: link
@@ -535,7 +535,7 @@ policy:
   - type: Agreement 
     title: Data Access Agreement
     uid: DataAccessAgreement 
-    profile: https://www.nichd.nih.gov/data_governance_odrl 
+    profile: https://github.com/NIH-NICHD/Data-Linkage-Governance 
     target: DATASET_C 
     permission: 
       - action: access
@@ -553,7 +553,7 @@ policy:
   - type: Process
     title: DATASET_D Linkage Study Participation Policy
     uid: DATASET_DLinkageStudyParticipationPolicy
-    profile: https://www.nichd.nih.gov/data_governance_odrl
+    profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
     target: DATASET_D
     permission:
       - action: link
@@ -568,7 +568,7 @@ policy:
   - type: Certificate 
     title: Grant of Confidentiality from the U.S. Department of Justice 
     uid: GrantOfConfidentialityFromTheUSDepartmentOfJustice 
-    profile: https://www.nichd.nih.gov/data_governance_odrl 
+    profile: https://github.com/NIH-NICHD/Data-Linkage-Governance 
     target: DATASET_E
     prohibition: 
       - action: reidentify
@@ -579,7 +579,7 @@ policy:
   - type: Agreement
     title: DATASET_F Assent
     uid: DATASET_FAssent
-    profile: https://www.nichd.nih.gov/data_governance_odrl
+    profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
     target: DATASET_F
     permission:
       - action: share
