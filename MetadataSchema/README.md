@@ -560,9 +560,11 @@ policy:
     target: DATASET_A
     permission:
       - action: access
-    obligation:
-      - action: sign
-        contractedParty: DataRequester
+        assigner: DataRequester
+        assignee: PrincipalInvestigator
+        has duty:
+        - action: sign
+          contractedParty: DataRequester
 
   - type: Agreement
     title: DATASET_A Designated Agent Form
@@ -603,7 +605,7 @@ policy:
       - action: access
         assigner: PrincipalInvestigator 
         assignee: DataRequester
-        obligation:
+        has duty:
          - action: sign
             assignee: DataRequester
 
@@ -618,7 +620,7 @@ policy:
     target: DATASET_D
     permission:
       - action: link
-        duty:
+        has duty:
          - action: obtainApproval
             approvingParty: DataProvider
             approvedParty: DataRequester
