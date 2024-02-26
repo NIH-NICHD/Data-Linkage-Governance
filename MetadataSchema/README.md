@@ -397,7 +397,7 @@ title: Governance Metadata UML
 ---
 
 classDiagram 
-  direction LR
+  direction TB
 
 %%namespace Relationship Legend {
     class classA {
