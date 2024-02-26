@@ -14,6 +14,7 @@
         <owl:imports rdf:resource="https://www.w3.org/ns/odrl/2/ODRL22.rdf"/>
         <terms:license>Apache License, Version 2.0</terms:license>
         <rdfs:comment xml:lang="en">This ontology provides a profile for the ODRL 2.2 specification that is specific to data governance and management in the context of data linkage.</rdfs:comment>
+        <rdfs:comment>Copyright 2024 The MITRE Corporation</rdfs:comment>
     </owl:Ontology>
     
 
@@ -431,19 +432,6 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
         <rdfs:label>Secondary Link</rdfs:label>
         <skos:definition>To link a dataset for a secondary purpose distinct from the primary intended and approved purpose</skos:definition>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/share -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/share">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
-        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
-        <rdfs:label>Share</rdfs:label>
-        <skos:definition>Making data available to the broader data user community, for example, by submitting the data to a data repository for dissemination [NICHD ODSS]</skos:definition>
-    </owl:NamedIndividual>
-    
 
 
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/sign -->
