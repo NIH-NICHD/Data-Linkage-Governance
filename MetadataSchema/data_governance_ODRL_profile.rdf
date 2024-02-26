@@ -12,7 +12,7 @@
      xmlns:data_governance_odrl="https://github.com/NIH-NICHD/Data-Linkage-Governance/">
     <owl:Ontology rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance">
         <owl:imports rdf:resource="https://www.w3.org/ns/odrl/2/ODRL22.rdf"/>
-        <terms:license>Apache License, Version 2.01</terms:license>
+        <terms:license>Apache License, Version 2.0</terms:license>
         <rdfs:comment>Copyright 2024 The MITRE Corporation</rdfs:comment>
         <rdfs:comment xml:lang="en">This ontology provides a profile for the ODRL 2.2 specification that is specific to data governance and management in the context of data linkage.</rdfs:comment>
     </owl:Ontology>
