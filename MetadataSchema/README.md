@@ -633,7 +633,7 @@ limitations under the License.
 
 ----
 
-MITRE: Approved for Public Release / Case #(**TODO: Note: insert once complete**)
+MITRE: Approved for Public Release / Case #24-0075
 
 This project was prepared by MITRE Corporation under Contract No. 75N94023F00171 from the Office of Data Science and Sharing (ODSS), Eunice Kennedy Shriver National Institute of Child Health and Human Development (NICHD), National Institutes of Health. The authors are solely responsible for the document’s contents, findings, and conclusions, which do not necessarily represent the views of NICHD ODSS. Readers should not interpret any statement in this product as an official position of NICHD ODSS or HHS.
 
@@ -644,4 +644,4 @@ No other use other than that granted to the U. S. Government, or to those acting
  
 For further information, please contact The MITRE Corporation, Contracts Management Office, 7515 Colshire Drive, McLean, VA  22102-7539, (703) 983-6000.  
  
-2024 The MITRE Corporation.
+Copyright 2024 The MITRE Corporation.
