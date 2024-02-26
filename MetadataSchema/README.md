@@ -587,7 +587,7 @@ policy:
       - action: link
         assigner: IRB 
         assignee: PrincipalInvestigator
-        duty: 
+        has duty: 
          - action: obtainApproval
            approvingParty: IRB 
            approvedParty: DataRequester 
