@@ -484,6 +484,24 @@ The data governance metadata schema is primarily an ODRL structure, with modest 
 |  | Operator | This class represents the operator in a constraint. The operator determines how the left operand is compared to the right operand. Common operators include equals, less than, greater than, and not equals. |
 |  | RightOperand | This class represents the right operand in a constraint. In a constraint expression, the right operand is the value that the left operand is compared to. The relationships between these classes represent how they work together to define a constraint. For example, a Constraint has a LeftOperand, an Operator, and a RightOperand. This could represent a constraint like "virtualLocation eq ControlledAccess," where "virtualLocation" is the LeftOperand, "Equals" is the Operator, and "ControlledAccess" is the RightOperand. Notably, the RightOperand can hold a single value or a list. |
 
+**Duty**
+
+Duty, as defined in the context of the ODRL Information Model, is the obligation to perform an action. It is a key component of a Rule and is disjoint from Permission and Prohibition. A Duty is associated with a consequence property and is in the range of duty, obligation, consequence, and remedy. 
+
+There are specific types of Duties such as Obligation, which relates an individual Duty to a Policy. Another type is Consequence, which relates a Duty to another Duty, the latter being a consequence of not fulfilling the former. Lastly, Remedy relates an individual remedy Duty to a Prohibition. 
+
+| | Duty | Obligation | Has Duty | Consequence | Remedy |
+| --- | --- | --- | --- | --- | --- |
+| **Definition** | The obligation to perform an Action | Relates an individual Duty to a Policy. | Relates an individual Duty to a Permission. | Relates a Duty to another Duty, the latter being a consequence of not fulfilling the former. | Relates an individual remedy Duty to a Prohibition. |
+| **Label** | Duty | Obligation | Has Duty | Consequence | Remedy |
+| **Identifier** | [http://www.w3.org/ns/odrl/2/Duty](http://www.w3.org/ns/odrl/2/Duty) | [http://www.w3.org/ns/odrl/2/obligation](http://www.w3.org/ns/odrl/2/obligation) | [http://www.w3.org/ns/odrl/2/duty](http://www.w3.org/ns/odrl/2/duty) | [http://www.w3.org/ns/odrl/2/consequence](http://www.w3.org/ns/odrl/2/consequence) | [http://www.w3.org/ns/odrl/2/remedy](http://www.w3.org/ns/odrl/2/remedy) |
+| **Note** | - | The Duty is a requirement which must be fulfilled. | A Duty is a pre-condition which must be fulfilled in order to receive the Permission. | The consequence property is utilised to express the repercussions of not fulfilling an agreed Policy obligation or duty for a Permission. If either of these fails to be fulfilled, then this will result in the consequence Duty also becoming a new requirement, meaning that the original obligation or duty, as well as the consequence Duty must all be fulfilled | The remedy property expresses an agreed Duty that must be fulfilled in case that a Prohibition has been violated by being exercised. |
+| **Parent property** | - | - | - | failure | failure |
+| **Domain** | - | Policy | Permission | Duty | Prohibition |
+| **Range** | - | Duty | Duty | Duty | Duty |
+
+
+
 ###  6.2. <a name='DataGovernanceODRLProfile'></a>Data Governance ODRL Profile
 The Data Governance Profile represents the extension to ODRL required to accurately represent governance metadata. The ODRL profile includes classes that represent different aspects of data governance, such as policies, parties involved, datasets, actions, rights, and personally identifiable information (PII) elements. 
 
@@ -527,7 +545,7 @@ The schema may support more advanced features depending on the specific requirem
 The schema includes several places where ODRL classes were extended (dotted line with an _extends_ relation) in the data governance profile.
 
 ###  7.4. <a name='Enumerations'></a>Enumerations 
-Several classes in the schema are marked as enumerations (indicated by the _<\<enumeration\>>_ symbol), to represent a value set a particular class represents. For example, the Action class can have possible actions like obtainConsent, notice, inform, grantUse, etc.
+Several classes in the schema are marked as enumerations (indicated by the _<\<enumeration\>>_ symbol), to represent possible instances of a particular class. For example, the Action class is an enumeration to represent different types of actions that can be associated with a Rule. The GovernanceAction class extends the Action class to include additional actions that are specific to data governance, such as collect, link, and re-identify.
 
 ##  8. <a name='MetadataSchemaExamples'></a>Metadata Schema Examples 
 Six examples that illustrate how the schema encodes common governance concepts are listed below. 
