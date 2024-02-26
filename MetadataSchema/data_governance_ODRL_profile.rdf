@@ -12,9 +12,9 @@
      xmlns:data_governance_odrl="https://github.com/NIH-NICHD/Data-Linkage-Governance/">
     <owl:Ontology rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance">
         <owl:imports rdf:resource="https://www.w3.org/ns/odrl/2/ODRL22.rdf"/>
-        <terms:license>Apache License, Version 2.0</terms:license>
-        <rdfs:comment xml:lang="en">This ontology provides a profile for the ODRL 2.2 specification that is specific to data governance and management in the context of data linkage.</rdfs:comment>
+        <terms:license>Apache License, Version 2.01</terms:license>
         <rdfs:comment>Copyright 2024 The MITRE Corporation</rdfs:comment>
+        <rdfs:comment xml:lang="en">This ontology provides a profile for the ODRL 2.2 specification that is specific to data governance and management in the context of data linkage.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -92,57 +92,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Consent -->
-
-    <owl:Class rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Consent">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
-        <rdfs:label>Consent</rdfs:label>
-        <skos:definition>Consent by a patient to participation in a clinical study after achieving an understanding of the relevant medical facts and the risks involved.
-
-[source: https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C16735]</skos:definition>
-        <odrl:profile>Data Governance</odrl:profile>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataUseAgreement -->
-
-    <owl:Class rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataUseAgreement">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
-        <rdfs:label>Data Use Agreement</rdfs:label>
-        <skos:definition>A Data Use Agreement (DUA) is a legal contract between the entity that owns access to a data source, typically a dataset or database, and a secondary entity that will receive the data, or a subset of it, for reuse. A DUA outlines terms and limitations on how the shared data can be used, and the secondary entity may need to meet certain criteria, such as their affiliated institution, their faculty status, and IRB approval for their research study. Examples of limitations include restricting access to the shared data, requiring that any research dissemination include citation of the data and its originating entity, requiring that data files are destroyed at the completion of research period, and restrictions on data use for commercial purposes. DUAs are frequently required for access to data that contain protected health information (PHI). 
-
-[source: https://www.nnlm.gov/guides/data-glossary/data-use-agreement]</skos:definition>
-        <odrl:profile>Data Goveranance</odrl:profile>
-    </owl:Class>
-    
-
-
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Dataset -->
-
-    <owl:Class rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Dataset">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
-        <rdfs:label>Dataset</rdfs:label>
-        <skos:definition>A collection of related data records.
-
-[source: 
-URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C47824]</skos:definition>
-        <odrl:profile>Data Governance</odrl:profile>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -151,24 +100,46 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/AcademicResearch -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Certification -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/AcademicResearch">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Certification">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
-        <rdfs:label>Academic Research</rdfs:label>
-        <skos:definition>Purposes associated with conducting or assisting with research conducted in an academic context e.g. within universities</skos:definition>
-        <skos:exactMatch>https://w3id.org/dpv#ResearchAndDevelopment</skos:exactMatch>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+        <rdfs:label>Certification</rdfs:label>
+        <skos:definition>the process of earning an official document, or the act of providing an official document, as proof that something has happened or been done. [Cambridge University Press] Includes NIH Institutional Certification and other Certifications of Confidentiality</skos:definition>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/ApprovedPurpose -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Consent -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/ApprovedPurpose">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Consent">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+        <rdfs:label>Consent</rdfs:label>
+        <skos:definition>The IRB-approved written record that is in compliance with 45 CFR 46 and as applicable, 21 CFR 50 Subparts B and D, and is used to demonstrate the consent by a subject/Legally Authorized Representative to participate in research. (This definition is cited in Policy 3014-301)</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Contract -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Contract">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+        <rdfs:label>Contract</rdfs:label>
+        <skos:definition>A legally binding agreement between parties that includes the exchange of funds [OASIS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/ControlledAccess -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/ControlledAccess">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
-        <rdfs:label>Approved Purpose</rdfs:label>
+        <rdfs:label>Controlled Access</rdfs:label>
+        <skos:definition>Application and eligibility requirements need to be met and approved (e.g., by a data access committee) to gain access. “Controlled access” and “access controls” refer to measures such as requiring data requesters to verify their identity and the appropriateness of their proposed research use to access protected data. [NIH]</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -179,28 +150,84 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
         <rdfs:label>Data Enclave</rdfs:label>
-        <skos:definition>Use of cryptographic methods to restrict access and execution to trusted parties and code within a dedicated execution environment</skos:definition>
-        <skos:exactMatch>https://w3id.org/dpv#TrustedExecutionEnvironments</skos:exactMatch>
+        <skos:definition>A secure network through which confidential data, such as identifiable information from census data, can be stored and disseminated. In a virtual data enclave a researcher can access the data from their own computer but cannot download or remove it from the remote server. Higher security data can be accessed through a physical data enclave where a researcher is required to access the data from a monitored room where the data is stored on non-network computers. [NNLM]</skos:definition>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataRequester -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataUseAgreement -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataRequester">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataUseAgreement">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-        <rdfs:label>Data Requester</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+        <rdfs:label>DataUseAgreement</rdfs:label>
+        <skos:definition>A document which establishes who is permitted to use and receive data, and the permitted uses and disclosures of such information by the recipient. (HHS modified)  An executed agreement between a data provider and a data recipient that specifies the terms under which the data can be used. [NIST]</skos:definition>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataSteeringCommittee -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Dataset -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataSteeringCommittee">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Dataset">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
+        <rdfs:label>Dataset</rdfs:label>
+        <skos:definition>A collection of related data records.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentifiedDataset -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentifiedDataset">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
+        <rdfs:label>Deidentified Dataset</rdfs:label>
+        <skos:definition>A set of information about a participant that excludes all direct and indirect identifiers that are specified in the HIPAA Privacy Rule and has undergone expert determination or meets Safe Harbor guidelines. [HIPAA]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Determination -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Determination">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+        <rdfs:label>Determination</rdfs:label>
+        <skos:definition>Outcome of a legal decision or ruling [LegalRuleML] Includes a letter of determination that documents an IRB decision on the status of research. (HHS)</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/IRB -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/IRB">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-        <rdfs:label>Data Steering Committee</rdfs:label>
+        <rdfs:label>Institutional Review Board</rdfs:label>
+        <skos:definition>An institutional review board (IRB) is the institutional entity charged with providing ethical and regulatory oversight of research involving human subjects, typically at the site of the research study. [NIH] An Institutional Review Board is an appropriately constituted group that has been formally designated to review and monitor biomedical research involving human subjects. An IRB has the authority to approve, require modifications in (to secure approval), or disapprove research. This group review serves an important role in the protection of the rights and welfare of human research subjects. [FDA]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/IRBDocumentation -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/IRBDocumentation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+        <rdfs:label>IRBDocumentation</rdfs:label>
+        <skos:definition>Documents generated by or with an IRB including protocols, letters, and decisions.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Law -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Law">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+        <rdfs:label>Law (regulations and statutes)</rdfs:label>
+        <skos:definition>A system of rules created and enforced by governmental bodies that regulate the behavior of individuals, organizations, and governmental entities. Inclusive of statutes and regulations.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -210,27 +237,52 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/LimitedDataSet">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
-        <rdfs:label>Limited Data Set</rdfs:label>
+        <rdfs:label>Limited Dataset</rdfs:label>
+        <skos:definition>A set of information about a participant that excludes direct identifiers that are specified in the HIPAA Privacy Rule. [HIPAA]</skos:definition>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarbor -->
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Policy -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarbor">
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Policy">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+        <rdfs:label>Policy</rdfs:label>
+        <skos:definition>A formal statement of intent or plan of action that is adopted by an organization such as a research entity and defines specific procedures, rules, or regulations that individuals  are expected to adhere to or follow.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/PrivacyBoardDocumentation -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/PrivacyBoardDocumentation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+        <rdfs:label>PrivacyBoardDocumentation</rdfs:label>
+        <skos:definition>Documents generated by or with a Privacy Board including protocols, letters, and decisions.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Process -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Process">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+        <rdfs:label>Process</rdfs:label>
+        <skos:definition>A procedure that individuals are expected to adhere to or follow.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarborMethod -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarborMethod">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
-        <rdfs:label>Safe Harbor</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/StudySite -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/StudySite">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-        <rdfs:label>Study Site</rdfs:label>
+        <rdfs:label>Safe Harbor Method</rdfs:label>
+        <skos:definition>A method for deidentification by removal of 18 elements of protected health information defined by the HIPAA Privacy Rule. [HIPAA]</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -266,6 +318,17 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Approve</rdfs:label>
         <skos:definition>To provide permission to perform data lifecycle activities, including collecting, linking, sharing, accessing, or using the data  [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/certificationOrganization -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/certificationOrganization">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Certification Organization</rdfs:label>
+        <skos:definition>An organization that grants or approves certifications or certificates. Includes Certificates of Confidentiality.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -317,12 +380,58 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/dataAccessCommittee -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/dataAccessCommittee">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Data Access Committee</rdfs:label>
+        <skos:definition>A group of individuals who provide guidance and oversight of controlled-access data and grant permission to access data.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/dataCoordinatingCenter -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/dataCoordinatingCenter">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Data Coordinating Center</rdfs:label>
+        <skos:definition>Academic and commercial data management and study oversight organizations, including contract research organizations, whose responsibilities include providing some or all the following services: study administration, financial management, protocol administration, data management, stakeholder communication and coordination, quality assurance, site monitoring, safety, regulatory, document management, post-study management, and close-out activities [NIDDK]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/dataProvider -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/dataProvider">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Data Provider</rdfs:label>
+        <skos:definition>Institutions/organizations/researchers that collect data from patients or study participants or that collect administrative data; they may also be the party to submit the data to a repository for sharing</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/dataRepository -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/dataRepository">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Data Repository</rdfs:label>
+        <skos:definition>A physical location or virtual system where data is stored, managed, and organized for further use.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/dataRequester -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/dataRequester">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Data Requester</rdfs:label>
+        <skos:definition>An individual or organization that requests access to a dataset that is not the participant</skos:definition>
         <skos:definition>An individual who requests access to a dataset that is not the participant</skos:definition>
     </owl:NamedIndividual>
     
@@ -347,6 +456,39 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Deidentify</rdfs:label>
         <skos:definition>To remove identifying information. De-identified patient data is patient information that has had personally identifiable information (PII; e.g. a person’s name, email address, or social security number), including protected health information (PHI; e.g. medical history, test results, and insurance information) removed. This is normally performed when sharing the data from a registry or clinical study to prevent a participant from being directly or indirectly identified. [NIH]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/disclosureReviewBody -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/disclosureReviewBody">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Disclosure Review Body</rdfs:label>
+        <skos:definition>A group of individuals that establishes and operates processes and policies for the public release of data products that do not reveal any information about the individuals included in those datasets.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/governmentOrganization -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/governmentOrganization">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Government Organization</rdfs:label>
+        <skos:definition>An international, federal, state, tribal, or local government organization. Inclusive of departments or divisions within a larger government organization.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/guardian -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/guardian">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Guardian</rdfs:label>
+        <skos:definition>An individual who is authorized under applicable State or local law to consent on behalf of a child to general medical care. (45 CFR 46.402(e)) (This definition is cited in Policy 3014-402.) Inclusive of  A child’s biological or adoptive parent. (45 CFR 46.402(d)) (This definition is cited in Policy 3014-402)</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -387,6 +529,17 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/minorParticipant -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/minorParticipant">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Minor Participant</rdfs:label>
+        <skos:definition>Refers to children or persons who have not attained the legal age for consent to treatments or procedures involved in the research, under the applicable law of the jurisdiction in which the research will be conducted (45 CFR 46.402(a)).</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/obtainApproval -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/obtainApproval">
@@ -395,6 +548,39 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Obtain Approval</rdfs:label>
         <skos:definition>To obtain verifiable approval to perform the requested action in relation to the Asset.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/participant -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/participant">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Participant</rdfs:label>
+        <skos:definition>Individual who is or becomes a participant in research, either as a recipient of the test article or as a control. A subject may be either a healthy human or a patient. [NIH]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/principalInvestigator -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/principalInvestigator">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Principal Investigator</rdfs:label>
+        <skos:definition>The investigator with the overall responsibility for the design, conduct, and reporting of the research, and must assure both the protocol and the research team’s actions are compliant with law, regulation, and NIH policy, even when certain aspects of the research are delegated to other investigators. [NIH definition cited in Policies 3014-102, 3014-106, and 3014-300]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/privacyBoard -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/privacyBoard">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Privacy Board</rdfs:label>
+        <skos:definition>A Privacy Board is a review body that may be established to act upon requests for a waiver or an alteration of the Authorization requirement under the Privacy Rule for uses and disclosures of PHI for a particular research study. A Privacy Board may waive or alter all or part of the Authorization requirements for a specified research project or protocol. A covered entity may use and disclose PHI, without an Authorization, or with an altered Authorization, if it receives the proper documentation of approval of such alteration or waiver from a Privacy Board. [NIH]</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -423,6 +609,17 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/reviewCommittee -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/reviewCommittee">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
+        <rdfs:label>Review Committee</rdfs:label>
+        <skos:definition>A group of individuals convened to review research or data related materials and provide approvals and issue determinations on data linkage, sharing, use, and access</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/secondaryLink -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/secondaryLink">
@@ -432,6 +629,7 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
         <rdfs:label>Secondary Link</rdfs:label>
         <skos:definition>To link a dataset for a secondary purpose distinct from the primary intended and approved purpose</skos:definition>
     </owl:NamedIndividual>
+    
 
 
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/sign -->
@@ -466,39 +664,21 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/#constraintLeftOpCommon">
-        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentificationMethod"/>
+    <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon">
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/accessPath"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/consentRequirement"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/dataRequester"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/deidentificationMethod"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/linkageMethod"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/#constraintRightOpCommon">
         <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/AcademicResearch"/>
         <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/ApprovedPurpose"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/ControlledAccess"/>
         <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataEnclave"/>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentifiedDataset"/>
         <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/LimitedDataSet"/>
-        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarbor"/>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Agreement"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Assertion"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Offer"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Privacy"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Request"/>
-            <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Ticket"/>
-            <rdf:Description rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Consent"/>
-            <rdf:Description rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataUseAgreement"/>
-        </owl:members>
+        <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarborMethod"/>
     </rdf:Description>
 </rdf:RDF>
 
