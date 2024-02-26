@@ -141,16 +141,6 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Collect -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Collect">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
-        <rdfs:label>Collect</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DataEnclave -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DataEnclave">
@@ -203,22 +193,6 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Link -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Link">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
-        <odrl:implies rdf:resource="http://www.w3.org/ns/odrl/2/aggregate"/>
-        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
-        <rdfs:label>Link</rdfs:label>
-        <skos:definition>A study in which data from different sources are &quot;linked&quot;. Usually used to compile epidemiological data. The logic of record linkage is that two or more items of information about a person recorded at different times, and perhaps in different places, may be of greater value when considered together than when either is considered alone.
-
-[source: https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C15424]</skos:definition>
-        <skos:exactMatch>https://thesaurus.cancer.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&amp;ns=ncit&amp;code=C15424</skos:exactMatch>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarbor -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/SafeHarbor">
@@ -229,23 +203,193 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Sign -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Sign">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
-        <rdfs:label>Sign</rdfs:label>
-        <skos:definition>Signing a document or agreement</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/StudySite -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/StudySite">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Study Site</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/access -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/access">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Access</rdfs:label>
+        <skos:definition>To acquire data from a data repository or other data sharing system [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/approve -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/approve">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Approve</rdfs:label>
+        <skos:definition>To provide permission to perform data lifecycle activities, including collecting, linking, sharing, accessing, or using the data  [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/classify -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/classify">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Classify</rdfs:label>
+        <skos:definition>To organize data by relevant categories so that it may be used and protected more efficiently [DAMA-DMBOK]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/collect -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/collect">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Collect</rdfs:label>
+        <skos:definition>To obtain data from participants for research, clinical, or administrative purposes [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/completeTraining -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/completeTraining">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Complete Training</rdfs:label>
+        <skos:definition>To complete training</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/deidentify -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/deidentify">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Deidentify</rdfs:label>
+        <skos:definition>To remove identifying information. De-identified patient data is patient information that has had personally identifiable information (PII; e.g. a person’s name, email address, or social security number), including protected health information (PHI; e.g. medical history, test results, and insurance information) removed. This is normally performed when sharing the data from a registry or clinical study to prevent a participant from being directly or indirectly identified. [NIH]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/link -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/link">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:implies rdf:resource="http://www.w3.org/ns/odrl/2/aggregate"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Link</rdfs:label>
+        <skos:definition>To combine information from a variety of data sources for the same individual [AHRQ] Synonymous with record linkage. [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/makeDetermination -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/makeDetermination">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Make Determination</rdfs:label>
+        <skos:definition>To reach a decision or draw conclusions for the purpose of data analysis</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/obtainApproval -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/obtainApproval">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Obtain Approval</rdfs:label>
+        <skos:definition>To obtain verifiable approval to perform the requested action in relation to the Asset.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/reidentify -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/reidentify">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Reidentify</rdfs:label>
+        <skos:definition>To attribute information to de-identified data in order to identify the individual to whom the de-identified data relate [NIST]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/researchUse -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/researchUse">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Research Use</rdfs:label>
+        <skos:definition>Working with data for secondary research or other analytical purposes [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/secondaryLink -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/secondaryLink">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Secondary Link</rdfs:label>
+        <skos:definition>To link a dataset for a secondary purpose distinct from the primary intended and approved purpose</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/share -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/share">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Share</rdfs:label>
+        <skos:definition>Making data available to the broader data user community, for example, by submitting the data to a data repository for dissemination [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/sign -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/sign">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Sign</rdfs:label>
+        <skos:definition>Signing a document or agreement</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/submit -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/submit">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
+        <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+        <rdfs:label>Submit</rdfs:label>
+        <skos:definition>To submit a document such as a form, application, or protocol</skos:definition>
     </owl:NamedIndividual>
     
 
