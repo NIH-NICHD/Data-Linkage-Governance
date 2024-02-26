@@ -60,6 +60,37 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/approvedParty -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/approvedParty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
+        <rdfs:label>Approved Party</rdfs:label>
+        <skos:definition>The party receiving approval on an asset</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/approvingParty -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/approvingParty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
+        <rdfs:label>Approving Party</rdfs:label>
+        <skos:definition>The party providing approval on an asset</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -173,16 +204,6 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentificationMethod -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/DeidentificationMethod">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
-        <rdfs:label>Deidentification Method</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/LimitedDataSet -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/LimitedDataSet">
@@ -221,6 +242,17 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Access</rdfs:label>
         <skos:definition>To acquire data from a data repository or other data sharing system [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/accessPath -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/accessPath">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
+        <rdfs:label>Access Path</rdfs:label>
+        <skos:definition>A system that provides services, and the technical details of how to access a dataset</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -273,6 +305,39 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
     
 
 
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/consentRequirement -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/consentRequirement">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
+        <rdfs:label>Consent Requirement</rdfs:label>
+        <skos:definition>A requirement to obtain consent from a person or organization</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/dataRequester -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/dataRequester">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
+        <rdfs:label>Data Requester</rdfs:label>
+        <skos:definition>An individual who requests access to a dataset that is not the participant</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/deidentificationMethod -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/deidentificationMethod">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
+        <rdfs:label>Deidentification Method</rdfs:label>
+        <skos:definition>The method to remove the identifiers or any information that could directly identify an individual from a dataset to mitigate privacy risks to that participant</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/deidentify -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/deidentify">
@@ -294,6 +359,17 @@ URL:https://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NC
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Link</rdfs:label>
         <skos:definition>To combine information from a variety of data sources for the same individual [AHRQ] Synonymous with record linkage. [NICHD ODSS]</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/linkageMethod -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/linkageMethod">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
+        <rdfs:label>Linkage Method</rdfs:label>
+        <skos:definition>The method used for linkage. Inclusive of PPRL and non-PPRL methods.</skos:definition>
     </owl:NamedIndividual>
     
 
