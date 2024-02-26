@@ -194,7 +194,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
         <rdfs:label>Determination</rdfs:label>
-        <skos:definition>Outcome of a legal decision or ruling [LegalRuleML] Includes a letter of determination that documents an IRB decision on the status of research. (HHS)</skos:definition>
+        <skos:definition>Outcome of a legal decision or ruling [LegalRuleML] Includes a letter of determination that documents an IRB decision on the status of research.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -488,7 +488,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Guardian</rdfs:label>
-        <skos:definition>An individual who is authorized under applicable State or local law to consent on behalf of a child to general medical care. (45 CFR 46.402(e)) (This definition is cited in Policy 3014-402.) Inclusive of  A child’s biological or adoptive parent. (45 CFR 46.402(d)) (This definition is cited in Policy 3014-402)</skos:definition>
+        <skos:definition>An individual who is authorized under applicable State or local law to consent on behalf of a child to general medical care. Inclusive of a child’s biological or adoptive parent. [45 CFR 46.402(d)]</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -535,7 +535,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Minor Participant</rdfs:label>
-        <skos:definition>Refers to children or persons who have not attained the legal age for consent to treatments or procedures involved in the research, under the applicable law of the jurisdiction in which the research will be conducted (45 CFR 46.402(a)).</skos:definition>
+        <skos:definition>Refers to children or persons who have not attained the legal age for consent to treatments or procedures involved in the research, under the applicable law of the jurisdiction in which the research will be conducted. [45 CFR 46.402(a)]</skos:definition>
     </owl:NamedIndividual>
     
 
