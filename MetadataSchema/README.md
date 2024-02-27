@@ -663,7 +663,7 @@ Please use this GitHub repository's Issue Tracker to request new terms/classes
 Consider evaluating if a term exists in an external vocabulary, e.g., https://terminology.hl7.org/5.4.0/ValueSet-v3-PurposeOfUse.html and could be reused in the data governance profile.
 
 ###  9.2. <a name='ContributorsandFunding'></a>Contributors and Funding
-This user guide was prepared for and is maintained by the National Institute of Child Health and Human Development (NICHD), Office of Data Science and Sharing (ODSS).
+This user guide was prepared for and is maintained by the Eunice Kennedy Shriver National Institute of Child Health and Human Development (NICHD), Office of Data Science and Sharing (ODSS).
 
 Contributors include:
 - The MITRE Corporation, McLean, VA
