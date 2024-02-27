@@ -562,7 +562,7 @@ policy:
       - action: access
         assigner: DataRequester
         assignee: PrincipalInvestigator
-        has duty:
+        duty:
         - action: sign
           contractedParty: DataRequester
 
@@ -587,7 +587,7 @@ policy:
       - action: link
         assigner: IRB 
         assignee: PrincipalInvestigator
-        has duty: 
+        duty:
          - action: obtainApproval
            approvingParty: IRB 
            approvedParty: DataRequester 
@@ -605,7 +605,7 @@ policy:
       - action: access
         assigner: PrincipalInvestigator 
         assignee: DataRequester
-        has duty:
+        duty:
          - action: sign
             assignee: DataRequester
 
@@ -620,7 +620,7 @@ policy:
     target: DATASET_D
     permission:
       - action: link
-        has duty:
+        duty:
          - action: obtainApproval
             approvingParty: DataProvider
             approvedParty: DataRequester
