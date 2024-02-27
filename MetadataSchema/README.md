@@ -571,7 +571,7 @@ policy:
     uid: DATASET_ADesignatedAgentForm
     profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
     target: DATASET_A
-    duty:
+    obligation:
       - action: submit
         contractedParty: DataRequester
 ```
