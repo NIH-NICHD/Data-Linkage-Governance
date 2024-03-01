@@ -431,7 +431,6 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Data Requester</rdfs:label>
-        <skos:definition>An individual or organization that requests access to a dataset that is not the participant</skos:definition>
         <skos:definition>An individual who requests access to a dataset that is not the participant</skos:definition>
     </owl:NamedIndividual>
     
