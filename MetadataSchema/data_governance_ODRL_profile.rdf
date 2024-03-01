@@ -100,6 +100,29 @@
     
 
 
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/AcademicResearch -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/AcademicResearch">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
+        <rdfs:label>Academic Research</rdfs:label>
+        <skos:definition>Purposes associated with conducting or assisting with research conducted in an academic context e.g. within universities</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#ResearchAndDevelopment</skos:exactMatch>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/ApprovedPurpose -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/ApprovedPurpose">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
+        <rdfs:label>Approved Purpose</rdfs:label>
+        <skos:definition>The activity or purpose for which the hirer wishes to use the asset</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Certification -->
 
     <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Certification">
@@ -107,6 +130,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
         <rdfs:label>Certification</rdfs:label>
         <skos:definition>the process of earning an official document, or the act of providing an official document, as proof that something has happened or been done. [Cambridge University Press] Includes NIH Institutional Certification and other Certifications of Confidentiality</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#Certification</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -118,6 +142,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
         <rdfs:label>Consent</rdfs:label>
         <skos:definition>The IRB-approved written record that is in compliance with 45 CFR 46 and as applicable, 21 CFR 50 Subparts B and D, and is used to demonstrate the consent by a subject/Legally Authorized Representative to participate in research. (This definition is cited in Policy 3014-301)</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#Consent</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -129,6 +154,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
         <rdfs:label>Contract</rdfs:label>
         <skos:definition>A legally binding agreement between parties that includes the exchange of funds [OASIS]</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#Contract</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -151,6 +177,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
         <rdfs:label>Data Enclave</rdfs:label>
         <skos:definition>A secure network through which confidential data, such as identifiable information from census data, can be stored and disseminated. In a virtual data enclave a researcher can access the data from their own computer but cannot download or remove it from the remote server. Higher security data can be accessed through a physical data enclave where a researcher is required to access the data from a monitored room where the data is stored on non-network computers. [NNLM]</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#TrustedExecutionEnvironments</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -228,6 +255,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
         <rdfs:label>Law (regulations and statutes)</rdfs:label>
         <skos:definition>A system of rules created and enforced by governmental bodies that regulate the behavior of individuals, organizations, and governmental entities. Inclusive of statutes and regulations.</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#Law</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -239,17 +267,6 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/RightOperand"/>
         <rdfs:label>Limited Dataset</rdfs:label>
         <skos:definition>A set of information about a participant that excludes direct identifiers that are specified in the HIPAA Privacy Rule. [HIPAA]</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/Policy -->
-
-    <owl:NamedIndividual rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/Policy">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
-        <rdfs:label>Policy</rdfs:label>
-        <skos:definition>A formal statement of intent or plan of action that is adopted by an organization such as a research entity and defines specific procedures, rules, or regulations that individuals  are expected to adhere to or follow.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -272,6 +289,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
         <rdfs:label>Process</rdfs:label>
         <skos:definition>A procedure that individuals are expected to adhere to or follow.</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#Process</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -295,6 +313,7 @@
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Access</rdfs:label>
         <skos:definition>To acquire data from a data repository or other data sharing system [NICHD ODSS]</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#Access</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -353,6 +372,7 @@
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Collect</rdfs:label>
         <skos:definition>To obtain data from participants for research, clinical, or administrative purposes [NICHD ODSS]</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#Collect</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -558,6 +578,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
         <rdfs:label>Participant</rdfs:label>
         <skos:definition>Individual who is or becomes a participant in research, either as a recipient of the test article or as a control. A subject may be either a healthy human or a patient. [NIH]</skos:definition>
+        <skos:exactMatch>https://w3id.org/dpv#Participant</skos:exactMatch>
     </owl:NamedIndividual>
     
 
