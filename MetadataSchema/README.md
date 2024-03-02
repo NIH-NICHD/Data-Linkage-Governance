@@ -281,7 +281,6 @@ classDiagram
         <<Enumeration>>
         IRBDocumentation
         Law regulations and statutes
-        Policy
         Privacy Board Documentation
         Process    
     }
