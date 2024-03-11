@@ -32,7 +32,7 @@ This project developed materials and resources to help researchers and data stew
 
 For questions or comments about this project, please send email to
 
-    <email-address>
+    NICHDecosystem@nih.gov
 
 ## License
 
