@@ -336,6 +336,7 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Approve</rdfs:label>
+        <skos:exactMatch>NCIt:C25425</skos:exactMatch>
         <skos:definition>To provide permission to perform data lifecycle activities, including collecting, linking, sharing, accessing, or using the data  [NICHD ODSS]</skos:definition>
     </owl:NamedIndividual>
     
@@ -462,6 +463,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/LeftOperand"/>
         <rdfs:label>Deidentification Method</rdfs:label>
+        <skos:closeMatch>https://w3c.github.io/dpv/dpv/#Deidentification</skos:closeMatch>
         <skos:definition>The method to remove the identifiers or any information that could directly identify an individual from a dataset to mitigate privacy risks to that participant</skos:definition>
     </owl:NamedIndividual>
     
