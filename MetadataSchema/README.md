@@ -459,6 +459,9 @@ The diagram above is used to illustrate the different types of relationships bet
 The data governance metadata schema is primarily an ODRL structure, with modest extensions to capture data governance-specific concepts. Section 6.1 provides an overview of how ODRL can be used to annotate governance metadata and section 6.2 defines the Data Governance Profile. 
 
 ###  6.1. <a name='ODRLClasses'></a>ODRL Classes
+
+The data governance metadata schema makes use of many existing ODRL classes and applies them to data governance.
+
 [Link to ODRL Documentation](https://www.w3.org/TR/odrl-model/#policy) 
 |   | ODRL Class | ODRL Definition and Data Governance Examples|
 | -------- | ---------- | ---------- |
@@ -466,7 +469,7 @@ The data governance metadata schema is primarily an ODRL structure, with modest 
 |  | AssetCollection | Represents a collection of assets with a source. |
 | Policies: | Policy | A group of one or more rules. Represents an abstract policy class with properties like uid, profile, conflict, creator, description, issued, modified, coverage, replaces, and isReplacedBy. Common governance policies include laws and regulations, data use agreements, consents, IRB documents, and standalone policies unaffiliated with formal documentation. |
 |  | Set | Represents a default policy with any combination of rules. Laws and regulations without an assigned party can be represented as a set.|
-|  | Offer | Represents an offer policy that is being granted from an assigner but does not grant any rules.|
+|  | Offer | Represents rules offered from assigner parties, typically used to make policies available to an audience, but does not grant any rules.|
 |  | Agreement | Represents an agreement policy. As agreements require an assignee and assigner, data use agreements, consents, and IRB determinations are common types of governance-relevant agreements. |
 | Parties: | Party | Represents a party with a unique identifier. A party may be an individual such as a study participant or the principal investigator, an organization, or an entity within an organization such as an IRB or a Steering Committee.|
 |  | PartyCollection | Represents a collection of parties. |
@@ -475,11 +478,11 @@ The data governance metadata schema is primarily an ODRL structure, with modest 
 |  | Prohibition | Represents a prohibition rule. Relevant governance prohibitions can be prohibition to re-identify a dataset. |
 |  | Obligation | Represents an obligation rule. Relevant governance obligation can be an obligation to obtain approval to link.|
 | Actions: | Action | Represents different types of actions. Actions are tied to rules and constraints. ODRL contains many action terms such as obtainConsent, inform, grantUse, extract, distribute, derive, commercialUse, attribute, anonymize, or aggregate. Governance specific terms such as collect, link, and re-identify were added through the data governance profile. |
-| Constraints: | Constraint | Represents a constraint with properties like uid, dataType, and unit. Constraints are limitations or caveats to a rule and are represented with a left and right operand and an operator. For example, a permission to access a dataset only within a secure enclave.|
+| Constraints: | Constraint | Represents a constraint with properties like uid, dataType, and unit. Constraints are limitations or caveats to a rule and are represented with a left and right operand and an operator. For example, a constraint of "virtualLocation eq ControlledAccess" could be a constraint on a permission (rule) to access (action) a dataset (asset) only when the virtual environment (left operand) equals (operator) a secure enclave (right operand).|
 |  | LogicalConstraint | Represents a logical constraint, which is used for expressions that compare two or more existing constraints. If the comparison of contraints based on a logical operator like _and_ or _or_ returns a logical match, then the Logical Constraint is satisfied, otherwise it is not satisfied.|
-|  | LeftOperand | This class represents the left operand in a constraint. In a constraint expression, the left operand is the value or property that the constraint is applied to. |
+|  | LeftOperand | This class represents the left operand in a constraint. In a constraint expression, the left operand is the value or property that the constraint is applied to. For example, a left operand might refer to a virtualEnvironment or a deidentificationMethod.|
 |  | Operator | This class represents the operator in a constraint. The operator determines how the left operand is compared to the right operand. Common operators include equals, less than, greater than, and not equals. |
-|  | RightOperand | This class represents the right operand in a constraint. In a constraint expression, the right operand is the value that the left operand is compared to. The relationships between these classes represent how they work together to define a constraint. For example, a Constraint has a LeftOperand, an Operator, and a RightOperand. This could represent a constraint like "virtualLocation eq ControlledAccess," where "virtualLocation" is the LeftOperand, "Equals" is the Operator, and "ControlledAccess" is the RightOperand. Notably, the RightOperand can hold a single value or a list. |
+|  | RightOperand | This class represents the right operand in a constraint. In a constraint expression, the right operand is the value that the left operand is compared to. The right operand can hold a single value or a list. For example, a right operand might refer to a DataEnclave or the SafeHarborMethod for deidentification.|
 
 **Duty**
 
