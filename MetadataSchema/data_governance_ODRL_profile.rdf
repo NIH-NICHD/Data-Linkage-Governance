@@ -336,8 +336,8 @@
         <rdf:type rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
         <odrl:includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
         <rdfs:label>Approve</rdfs:label>
-        <skos:exactMatch>NCIt:C25425</skos:exactMatch>
         <skos:definition>To provide permission to perform data lifecycle activities, including collecting, linking, sharing, accessing, or using the data  [NICHD ODSS]</skos:definition>
+        <skos:exactMatch>NCIt:C25425</skos:exactMatch>
     </owl:NamedIndividual>
     
 
@@ -686,6 +686,9 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/Policy">
+        <skos:definition>A formal statement of intent or plan of action that is adopted by an organization such as a research entity and defines specific procedures, rules, or regulations that individuals  are expected to adhere to or follow.</skos:definition>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/#constraintLeftOperandCommon">
         <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/accessPath"/>
         <skos:member rdf:resource="https://github.com/NIH-NICHD/Data-Linkage-Governance/consentRequirement"/>
