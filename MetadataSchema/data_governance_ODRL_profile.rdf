@@ -49,15 +49,6 @@
     
 
 
-    <!-- https://github.com/NIH-NICHD/Data-Linkage-Governance/metadata_creation_date -->
-
-    <owl:AnnotationProperty rdf:about="https://github.com/NIH-NICHD/Data-Linkage-Governance/metadata_creation_date">
-        <rdfs:label>Metadata Creation Date</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
