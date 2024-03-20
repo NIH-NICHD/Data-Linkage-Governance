@@ -220,9 +220,9 @@ class Action {
 %%}
 
 
-Policy <|-- Set : subClasss
-Policy <|-- Offer : subClass
-Policy <|-- Agreement : subClass
+Policy <|-- Set : rdfs_subClassOf
+Policy <|-- Offer : rdfs_subClassOf
+Policy <|-- Agreement : rdfs_subClassOf
 Policy "1" --* "0..*" Rule : permission\nobligation\nprohibition
 Policy "1" .. "0..*" Action : action
 Policy "1" .. "0..*" Asset : target\noutput
@@ -233,10 +233,10 @@ Asset <|-- AssetCollection
 AssetCollection "1" *-- "0..*" Asset : partOf
 PartyCollection "1" *-- "0..*" Party : partOf
 Asset "1" .. "0..*" Policy : hasPolicy
-Party <|-- PartyCollection : subClass
-Rule <|-- Permission : subClass
-Rule <|-- Prohibition : subClass
-Rule <|-- Duty : subClass
+Party <|-- PartyCollection : rdfs_subClassOf
+Rule <|-- Permission : rdfs_subClassOf
+Rule <|-- Prohibition : rdfs_subClassOf
+Rule <|-- Duty : rdfs_subClassOf
 Rule "1" --* "0..*" Action : action
 Policy "1" <-- "0..*" Policy : inheritFrom
 Policy "1" <-- "0..*" Policy : dc_requires
@@ -303,7 +303,6 @@ classDiagram
     }
 
     class Dataset {
-        <<Asset>>
         dc:source
         dc:publisher
         dc:type
@@ -349,7 +348,7 @@ classDiagram
         Linkage Method
     }
 
-    class PIIElements {
+    class PIIElement {
         <<enumaration>>
         Names
         GeographicData
@@ -370,19 +369,34 @@ classDiagram
         FullFacePhotosAndAnyComparableImages
         AnyOtherUniqueIdentifyingNumberOrCode
     }
+
+    class PriorLinkage {
+        dc:title title
+        dc:type type
+        dc:source source
+        string entity_resolver
+        string performing_party
+        string quality_assessment
+        string data_sharing_method
+        dc:created created
+        dc:modified modified
+    }
+    
 %%}
 
 %% ODRL profile relations
-GovernanceAction ..|> Action : extends
-GovernanceAgreementPolicy ..|> Agreement : extends
-GovernanceSetPolicy ..|> Set : extends
-Policy <|-- Set : subClasss
-Policy <|-- Agreement : subClass
-GovernanceParty ..|> Party : extends
-GovernanceRightOperand ..|> RightOperand : extends
-GovernanceLeftOperand ..|> LeftOperand : extends
-Dataset ..|> Asset : extends
-Dataset "1" --* "0..*" PIIElements : contains
+GovernanceAction ..|> Action : rdf_type
+GovernanceAgreementPolicy ..|> Agreement : rdf_type
+GovernanceSetPolicy ..|> Set : rdf_type
+Policy <|-- Set : rdfs_subClassOf
+Policy <|-- Agreement : rdfs_subClassOf
+GovernanceParty ..|> Party : rdf_type
+GovernanceRightOperand ..|> RightOperand : rdf_type
+GovernanceLeftOperand ..|> LeftOperand : rdf_type
+Dataset ..|> Asset : rdf_type
+Dataset "1" --* "0..*" PIIElement : pii_elements
+Dataset "1" --* "0..*" PriorLinkage : prior_linkage
+PriorLinkage "1" --* "0..*" PIIElement : pii_elements
 
 ```
 
