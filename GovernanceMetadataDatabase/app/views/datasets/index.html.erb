@@ -1,0 +1,44 @@
+<div class="bg-body-tertiary border rounded-3 fs-5 p-3 mb-3">
+  This application provides a simple interface to view the contents of a governance metadata
+  database that encodes governance metadata from 11 HHS clinical and administrative datasets, acting
+  as a demonstration of how governance information may be annotated as metadata.
+</div>
+
+<div class="bg-body-tertiary border rounded-3 p-3 mb-3">
+
+  <h3>Individual Datasets</h3>
+
+  <p>Data from individual datasets can be viewed in a simple listing format:</p>
+
+  <ul>
+    <% @datasets.each do |dataset| %>
+    <li><%= link_to dataset.name, dataset %></li>
+    <% end %>
+  </ul>
+
+</div>
+
+<div class="bg-body-tertiary border rounded-3 p-3 mb-3">
+
+  <h3>All Datasets</h3>
+
+  <p>Data from all datasets can also be viewed on a single page:</p>
+
+  <ul>
+    <li><%= link_to "All Datasets", all_datasets_path %></li>
+  </ul>
+
+</div>
+
+
+<div class="bg-body-tertiary border rounded-3 p-3 mb-3">
+
+  <h3>Side-by-side View</h3>
+
+  <p>Data from multiple datasets can be viewed in columns allowing datsets to be more easily compared:</p>
+
+  <ul>
+    <li><%= link_to 'Compare Dataset Metadata', query_datasets_path %></li>
+  </ul>
+
+</div>

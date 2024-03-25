@@ -28,9 +28,11 @@ This project developed materials and resources to help researchers and data stew
   
 * A governance assessment report that documents an analysis of data governance requirements for linking 11 high-priority U.S. Department of Health and Human Services (HHS) and other federally datasets, based on three theoretical pediatric COVID-19 research use cases.
 
-* A prototype data governance metadata search and visualization tool that will inform researchers how datasets of interest can be linked and used. The tool is based on a relational database that encodes governance metadata from the 11 HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata. _Coming soon._
+* A [relational database and query tool](GovernanceMetadataDatabase) that encodes and makes available governance metadata from the 11 HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata.
+
+* A prototype data governance metadata search and visualization tool that will inform researchers how datasets of interest can be linked and used. _Coming soon._
   
-* 	A prototype data governance metadata collection tool to enable researchers or other stakeholders to enter, store, and communicate dataset-level consent, policy, regulatory, and other governance information as metadata in a standard format to inform decisions about data linkages. _Coming soon._
+* A prototype data governance metadata collection tool to enable researchers or other stakeholders to enter, store, and communicate dataset-level consent, policy, regulatory, and other governance information as metadata in a standard format to inform decisions about data linkages. _Coming soon._
 
 
 ## Contact Information
