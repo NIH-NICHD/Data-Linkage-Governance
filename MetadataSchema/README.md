@@ -14,8 +14,7 @@
   7. [Schema Requirements](#SchemaRequirements)
 	 * 7.1. [Must Support Requirements](#MustSupportRequirements)
 	 * 7.2. [May Support Requirements](#MaySupportRequirements)
-	 * 7.3. [Extensions](#Extensions)
-	 * 7.4. [Enumerations](#Enumerations)
+	 * 7.3. [Enumerations](#Enumerations)
   8. [Metadata Schema Examples](#MetadataSchemaExamples)
 	 * 8.1. [Example A: Data requesters must complete a Designated Agent Form and sign a Data Access Agreement to use DATASET_A](#ExampleA:DatarequestersmustcompleteaDesignatedAgentFormandsignaDataAccessAggreementtouseDATASET_A)
 	 * 8.2. [Example B: Health Center IRB authorizes data linkage for DATASET_B; data requesters must obtain permission for linkage from Health Center IRB](#ExampleB:HealthCenterIRBauthorizesdatalinkageforDATASET_BdatarequestersmustobtainpermissionforlinkagefromHealthCenterIRB)
@@ -517,27 +516,15 @@ There are specific types of Duties such as Obligation, which relates an individu
 
 
 ###  6.2. <a name='DataGovernanceODRLProfile'></a>Data Governance ODRL Profile
-The Data Governance Profile created in this project represents the extension to ODRL required to accurately represent governance metadata. This profile includes classes that represent different aspects of data governance, such as policies, parties involved, datasets, actions, rights, and personally identifiable information (PII) elements. 
+The Data Governance Profile created in this project represents the extension to ODRL required to accurately represent governance metadata. It includes terms that represent different aspects of data governance, such as actions, parties, and different types of constraints. For a comprehensive understanding of these terms, their definitions, and example usages, please refer to the following two files defining the Data Governance Profile:
 
-For those interested in using the metadata schema defined in this resource, please reference the following files, which define the Data Governance Profile: 
 * [Data Governance ODRL Profile Ontology](data_governance_ODRL_profile.rdf)
 * [Data Governance ODRL Profile Data Dictionary](DataDictionary.xlsx)
-
-| Class | Data Governance Definition and Example Terms|
-| ---------- | ---------- |
-| Policy | Represents different types of governance policies. Extended to incorporate consent and data use agreement policy classes.|
-| Party | Represents different parties involved in governance. Extended to incorporate, e.g.: InstitutionalReviewBoard.|
-| Dataset | Represents an ODRL Asset with additional properties like source, publisher, type, creator, and contributor. |
-| Action | Represents different types of governance actions. Extended to incorporate, e.g.: collect, link, and re-identify.|
-| RightOperand | Represents different types of constraints in governance. Extended to incorporate, e.g.: Data Enclave and Academic Research.|
-| PIIElements | Represents different types of personally identifiable information elements available to enable linkage. Extended to incorporate personally-identifiable information data: Names, GeographicData, Dates, PhoneNumbers, FaxNumbers, EmailAddresses, SocialSecurityNumbers, MedicalRecordNumbers, HealthPlanBeneficiaryNumbers, AccountNumbers, CertificateLicenseNumbers, VehicleIdentifiersAndSerialNumbers, DeviceIdentifiersAndSerialNumbers, URLs, IPAddresses, BiometricIdentifiers, FullFacePhotosAndAnyComparableImages, AnyOtherUniqueIdentifyingNumberOrCode.|
-
-For a full list of the terms in the Data Governance Profile, please reference the [Data Governance ODRL Profile Data Dictionary](DataDictionary.xlsx).
 
 ##  7. <a name='SchemaRequirements'></a>Schema Requirements
 
 ###  7.1. <a name='MustSupportRequirements'></a>Must Support Requirements
-The schema must support the creation and management of the classes defined in the namespaces. This includes creating instances of these classes, setting and retrieving their properties, and managing the relationships between them. For example, the system must support creating a Policy; assigning it a unique identifier (uid); setting its profile, conflict term, creator, description, issued and modified dates, and coverage; and managing its relationships with Rules, Actions, Assets, and Parties.
+The schema must support the creation and management of the terms defined in the namespaces. This includes creating these terms, setting and retrieving their properties, and managing the relationships between them. For example, the system must support creating a Policy; assigning it a unique identifier (uid); setting its profile, conflict term, creator, description, issued and modified dates, and coverage; and managing its relationships with Rules, Actions, Assets, and Parties.
 
 **Must Have Specific Properties:**
 - **Policy:** Must have properties like uid, profile, conflict, creator, description, issued, modified, coverage, replaces, and isReplacedBy.
@@ -550,16 +537,8 @@ The schema must support the creation and management of the classes defined in th
 ###  7.2. <a name='MaySupportRequirements'></a>May Support Requirements
 The schema may support more advanced features depending on the specific requirements of the system being implemented. For example, it may support advanced querying capabilities to retrieve Policies based on their properties or relationships. It may also support features like versioning (to track changes to a Policy over time), access control (to restrict who can view or modify a Policy), and validation (to ensure that the properties and relationships of a Policy conform to certain rules).
 
-**May Have Specific Properties:**
-- **Dataset:** May have properties like dc:source, dc:publisher, dc:type, dc:creator, and dc:contributor. These properties are not explicitly required by the schema, but they are typically important attributes of a dataset.
-- **LeftOperand, Operator, RightOperand:** These classes are used in the definition of a Constraint, but the schema does not specify what properties they should have. The specific properties would depend on the requirements of the system being implemented.
-- **Rule:** The schema does not specify what properties a Rule should have, but it could potentially have properties like a unique identifier, a description, and a list of associated Actions. Remember, the properties that a class must or may have can depend on the specific requirements of the system being implemented. The schema provides a general structure, but the specific details can vary.
-
-###  7.3. <a name='Extensions'></a>Extensions 
-The schema includes several places where ODRL classes were extended (dotted line with an _extends_ relation) in the data governance profile.
-
-###  7.4. <a name='Enumerations'></a>Enumerations 
-Several classes in the schema are marked as enumerations (indicated by the _<\<enumeration\>>_ symbol), to represent possible instances of a particular class. For example, in ODRL the Action class is an enumeration to represent different types of actions that can be associated with a Rule. In the data governance profile, GovernanceAction class extends the Action class to include additional actions that are specific to data governance, such as collect, link, and re-identify.
+###  7.3. <a name='Enumerations'></a>Enumerations 
+Several entities in the UML schema diagram are marked as enumerations, indicated by the _<\<enumeration\>>_ tag. These represent possible lists of terms that a given concept can be associated with. For example, the Action enumeration represents different types of actions that can be associated with a Rule. In the data governance profile, the GovernanceAction enumeration lists all the specific Action terms that are unique to data governance, such as collect, link, and re-identify.
 
 ##  8. <a name='MetadataSchemaExamples'></a>Metadata Schema Examples 
 Six examples that illustrate how the schema encodes common governance concepts are listed below. 
