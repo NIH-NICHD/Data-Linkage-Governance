@@ -26,7 +26,7 @@ This project developed materials and resources to help researchers and data stew
 
 * A [landscape analysis](LandscapeAnalysis.md) that identifies existing governance-relevant standards that could be used in a data governance metadata schema.
   
-* A governance assessment report that documents an analysis of data governance requirements for linking 11 high-priority U.S. Department of Health and Human Services (HHS) and other federally datasets, based on three theoretical pediatric COVID-19 research use cases.
+* A governance assessment report that documents an analysis of data governance requirements for linking 11 high-priority U.S. Department of Health and Human Services (HHS) and other federally funded datasets, based on three theoretical pediatric COVID-19 research use cases.
 
 * A [relational database and query tool](GovernanceMetadataDatabase) that encodes and makes available governance metadata from the 11 HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata.
 
