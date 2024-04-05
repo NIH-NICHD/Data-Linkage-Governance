@@ -1,6 +1,6 @@
 class Policy < ApplicationRecord
 
-  # List lof supported Policies
+  # List of supported Policies
   TYPES = ['Agreement', 'Certification', 'Consent', 'Contract', 'DataUseAgreement', 'Determination', 'IRBDocumentation',
            'Law', 'Policy', 'PrivacyBoardDocumentation', 'Process', 'Request']
 

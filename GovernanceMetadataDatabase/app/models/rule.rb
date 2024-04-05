@@ -1,8 +1,9 @@
 class Rule < ApplicationRecord
 
   # List of supported actions
-  ACTIONS = ['access', 'anonymize', 'approve', 'classify', 'collect', 'completeTraining', 'deidentify', 'link', 'makeDetermination', 'obtainApproval',
-             'obtainConsent', 'reidentify', 'researchUse', 'reviewPolicy', 'secondaryLink', 'sell', 'share', 'sign', 'submit', 'transfer']
+  ACTIONS = ['access', 'anonymize', 'approve', 'classify', 'collect', 'completeTraining', 'deidentify', 'execute',
+             'link', 'makeDetermination', 'obtainApproval','obtainConsent', 'reidentify', 'researchUse', 'reviewPolicy',
+             'secondaryLink', 'secondaryUse', 'sell', 'share', 'sign', 'submit', 'transfer']
 
   self.inheritance_column = nil # Allows us to use 'type' as a column
   # Can either belong to a policy or a rule (if it's a duty)

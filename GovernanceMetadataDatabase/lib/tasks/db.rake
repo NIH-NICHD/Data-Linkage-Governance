@@ -23,7 +23,7 @@ namespace :db do
       raise "Datetime must be provided using the DATETIME environment variable (YY_MM_DD__HH_MM_SS)" unless datetime
       filename = File.join(LOCATION, "#{app}_#{datetime}.dump")
       # Make sure the file is present before dropping the existing database
-      raise "Database backup file '#{filename}' not found" unless File.exists?(filename)
+      raise "Database backup file '#{filename}' not found" unless File.exist?(filename)
       Rake::Task["db:drop"].invoke
       Rake::Task["db:create"].invoke
       cmd = "pg_restore --verbose --host #{host} --username '#{user}' --clean --no-owner --no-acl --dbname #{db} #{filename}"

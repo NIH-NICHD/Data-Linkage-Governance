@@ -175,14 +175,16 @@ namespace :data do
               raise "Cannot have conflicting permission/probibition/obligation in the same segment"
             end
             rule = if annotations['prohibition']
-                     puts "  WARNING: Unknown action #{annotations['prohibition']} found" unless Rule::ACTIONS.include?(annotations['prohibition'])
-                     policy.rules.find_or_create_by(action: annotations['prohibition'], type: 'Prohibition')
+                     action = annotations['prohibition'].camelize.downcase_first
+                     puts "  WARNING: Unknown action #{action} found" unless Rule::ACTIONS.include?(action)
+                     policy.rules.find_or_create_by(action: action, type: 'Prohibition')
                    elsif annotations['obligation']
                      # ORDL duty is referred to as obligation if directly on policy and duty if associated with a permission
-                     puts "  WARNING: Unknown action #{annotations['obligation']} found" unless Rule::ACTIONS.include?(annotations['obligation'])
-                     policy.rules.find_or_create_by(action: annotations['obligation'], type: 'Duty')
+                     action = annotations['obligation'].camelize.downcase_first
+                     puts "  WARNING: Unknown action #{action} found" unless Rule::ACTIONS.include?(action)
+                     policy.rules.find_or_create_by(action: action, type: 'Duty')
                    else
-                     action = (annotations['action'] || lifecycle_actions[lifecycle]).downcase_first
+                     action = (annotations['action'] || lifecycle_actions[lifecycle]).camelize.downcase_first
                      puts "  WARNING: Unknown action #{action} found" unless Rule::ACTIONS.include?(action)
                      policy.rules.find_or_create_by(action: action, type: 'Permission')
                    end
@@ -289,6 +291,9 @@ namespace :data do
     klasses.each do |klass|
       puts "Deleting all data of type #{klass}"
       klass.delete_all
+      # We also want to reset the ID counts so everything starts with repeatable IDs when loading
+      # Note: this only works with PostgreSQL
+      klass.connection.execute("ALTER SEQUENCE #{klass.table_name}_id_seq RESTART WITH 1")
     end
   end
 

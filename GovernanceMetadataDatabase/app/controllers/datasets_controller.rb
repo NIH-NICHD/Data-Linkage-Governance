@@ -2,14 +2,26 @@ class DatasetsController < ApplicationController
 
   def index
     @datasets = Dataset.order(:id)
+    respond_to do |format|
+      format.html
+      format.json { render json: @datasets, include: '**' }
+    end
   end
 
   def show
     @dataset = Dataset.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @dataset, include: '**' }
+    end
   end
 
   def all
     @datasets = Dataset.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @datasets, include: '**' }
+    end
   end
 
   def query
