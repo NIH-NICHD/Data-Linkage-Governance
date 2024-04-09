@@ -20,7 +20,7 @@ This repository contains the key project resources created to develop and test t
 
 These project materials and resources will help researchers and data stewards ensure that dataset linkages are appropriate:
 
-* A metadata schema to annotate data governance information relevant to accessing, sharing, linking, and using individual-level participant data. For documentation, visit the [Data Governance Metadata Schema User Guide](MetadataSchema)
+* A metadata schema to annotate data governance information relevant to accessing, sharing, linking, and using individual-level participant data. For documentation, visit the [Data Governance Metadata Schema User Guide](MetadataSchema).
 
 * A report of considerations for linking datasets in a federated data ecosystem based on findings from existing record linkage implementations. For the full report, visit [Privacy Preserving Record Linkage (PPRL) for Pediatric COVID-19 Studies](https://www.nichd.nih.gov/sites/default/files/inline-files/NICHD_ODSS_PPRL_for_Pediatric_COVID-19_Studies_Public_Final_Report_508.pdf).
 
