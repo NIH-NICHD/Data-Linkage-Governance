@@ -6,7 +6,7 @@
   1. [Introduction](#Introduction)
   2. [Metadata Schema Resources](#MetadataSchemaResources)
   3. [Metadata Schema Description](#MetadataSchemaDescription)
-  4. [Schema Diagram](#SchemaDiagram)
+  4. [Metadata Schema Diagram](#MetadataSchemaDiagram)
   5. [Schema Relationships](#SchemaRelationships)
   6. [Schema Components](#SchemaComponents)
 	 * 6.1. [ODRL Classes](#ODRLClasses)
@@ -46,11 +46,11 @@ More information is available on the [project](https://github.com/NIH-NICHD/Data
 ##  2. <a name='MetadataSchemaResources'></a>Metadata Schema Resources
 These resources have been developed to support metadata schema adoption and use:
 
-- [A description and definition of metadata schema components](#MetadataSchemaDescription)
-- [A metadata schema Unified Modeling Language diagram](#SchemaDiagram)
-- [A data dictionary of the data governance profile (a governance-specific subset of the metadata schema)](#DataGovernanceProfile)
+- [Metadata Schema Description](#MetadataSchemaDescription): Describes and defines of schema components
+- [Metadata Schema Diagram](#MetadataSchemaDiagram): Describes the schema in the Unified Modeling Language (UML)
+- [Data Governance Profile](#DataGovernanceProfile): Provides the data dictionary that describes metadata terms specific to data governance
 - [A description of schema requirements](#SchemaRequirements)
-- [Six examples of common data governance concepts encoded within the metadata schema](#ExampleA:DatarequestersmustcompleteaDesignatedAgentFormandsignaDataAccessAggreementtouseDATASET_A)
+- [Metadata Schema Examples](#ExampleA:DatarequestersmustcompleteaDesignatedAgentFormandsignaDataAccessAggreementtouseDATASET_A): Six examples of common data governance concepts
 
 ##  3. <a name='MetadataSchemaDescription'></a>Metadata Schema Description
 The metadata schema is a structured framework that outlines technical rules and conventions to create, provide, maintain, and use data governance metadata. 
@@ -97,11 +97,11 @@ classDiagram
     Rule "1" *-- "0..*" Rule : (failure)\n\nduty\nremedy
 ```
 
-The Open Digital Rights Language (ODRL) is a versatile policy articulation language that offers an adaptable and interoperable data model, vocabulary, and encoding systems for expressing statements about the utilization of content and services. The foundational elements for the semantics of the ODRL policies are outlined in the ODRL Information Model, which details the core concepts, entities, and relationships. _Policies_ are made up of _rules_ which are employed to denote permitted (allowed) and prohibited (forbidden) _actions_ on a specific _asset_, as well as the responsibilities that _parties_ (stakeholders) are required to fulfill (i.e., obligations). Furthermore, _rules_ can be subject to _constraints_ (e.g., locations of data access) and duties (such as obtaining approvals) that can be imposed on permissions. This system of policies, rules, parties, and constraints serves as an ideal basis for governance metadata schema development, and a useful representation of data governance requirements relevant to linkage. Further information on ODRL can be found [here](https://www.w3.org/TR/odrl-model/). 
+The Open Digital Rights Language (ODRL) is a versatile policy articulation language that offers an adaptable and interoperable data model, vocabulary, and encoding systems for expressing statements about the utilization of content and services. The foundational elements for the semantics of the ODRL policies are outlined in the ODRL Information Model, which details the core concepts, entities, and relationships. _Policies_ are made up of _rules_ which are employed to denote permitted (allowed) and prohibited (forbidden) _actions_ on a specific _asset_, as well as the responsibilities that _parties_ (stakeholders) are required to fulfill (i.e., obligations). Furthermore, _rules_ can be subject to _constraints_ (e.g., locations of data access) and duties (such as obtaining approvals) that can be imposed on permissions. This system of policies, rules, parties, and constraints serves as an ideal basis for governance metadata schema development, and a useful representation of data governance requirements relevant to linkage. Additional information is available at [World Wide Web Consortium (W3C) ODRL Information Model 2.2](https://www.w3.org/TR/odrl-model/). 
 
 This user guide focuses on the unique aspects of a data governance-specific vocabulary that the project team has used to extend the ODRL Core Vocabulary with new terms to express policies in the data governance space ([Data Governance Profile](#DataGovernanceProfile)). This schema reflects ODRL structure with selected additions for data governance concepts, derived from auxiliary standards, denoted in a data governance profile. The data governance profile incorporates some concepts from the Data Privacy Vocabulary ([DPV] - https://w3c.github.io/dpv/dpv/), the Dublin Core terms ([DC] - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/), as well as Simple Knowledge Organization System ([SKOS] - https://www.w3.org/TR/skos-reference/).
 
-##  4. <a name='SchemaDiagram'></a>Schema Diagram
+##  4. <a name='MetadataSchemaDiagram'></a>Metadata Schema Diagram
 The schema Unified Modeling Language (UML) diagram provides a visual representation of the schema's structure and relationships.
 
 ```mermaid
@@ -457,7 +457,7 @@ classDiagram
 
 ```
 
-The diagram above is used to illustrate the different types of relationships between classes in the UML diagram. Only a subset of these UML relationships are used in the first version of the schema. Please note that these are general UML concepts and their specific interpretation can vary based on the context of a given diagram.
+The Schema Relationships UML diagram is used to illustrate the different types of relationships between classes in the UML diagram. Only a subset of these UML relationships is used in the first version of the schema. Please note that these are general UML concepts and their specific interpretation can vary based on the context of a given diagram.
 
 1.	**Inheritance (--|>):** Represents a relationship between two classes where one class (the subclass) inherits from another class (the superclass). In the legend, classA is a subclass of classB.
 2.	**Composition (--*):** Represents a type of association that represents a part-whole or part-of relationship. In the legend, classC is composed of classD
@@ -475,7 +475,7 @@ The data governance metadata schema is primarily an ODRL structure, with modest 
 
 The data governance metadata schema makes use of many existing ODRL classes and applies them to data governance.
 
-[Link to ODRL Documentation](https://www.w3.org/TR/odrl-model/#policy) 
+[W3C ODRL Documentation](https://www.w3.org/TR/odrl-model/#policy) 
 |   | ODRL Class | ODRL Definition and Data Governance Examples|
 | -------- | ---------- | ---------- |
 | Assets: | Asset | Represents an asset with a unique identifier. Datasets for which governance metadata is recorded are represented as assets.|
