@@ -233,7 +233,6 @@ The following actions are present in the rule data loaded into the database:
 | collect           |The process of gathering and measuring information on variables of interest, in an established systematic fashion that enables one to answer stated research questions, test hypotheses, and evaluate outcomes.|
 | completeTraining  |To complete training.|
 | deidentify        |To remove identifying information. De-identified patient data is patient information that has had personally identifiable information (PII; e.g. a person’s name, email address, or social security number), including protected health information (PHI; e.g. medical history, test results, and insurance information) removed. This is normally performed when sharing the data from a registry or clinical study to prevent a participant from being directly or indirectly identified.|
-| execute           |Finalize an agreement based on the signatures of all designated parties.|
 | link              |To combine information from a variety of data sources for the same individual.|
 | makeDetermination |To reach a decision or draw conclusions.|
 | obtainApproval    |To obtain verifiable approval to perform the requested action in relation to the Asset.|
@@ -359,7 +358,7 @@ The following party names are present in the party data loaded into the database
   * created_at - a timestamp indicating when a source entry was created
   * updated_at - a timestamp indicating when a source entry was last updated
 
-**DataLifecycle** - Represents the data lifecycle section of the use case governance information Excel document that commentary was taken from; each policy commentary has a data lifecycle.
+**DataLifecycle** - Represents the phase of the data lifecycle from which a rule or policy originates; each policy commentary has a data lifecycle.
   * id - an identifier that uniquely identifies a data lifecycle
   * name - the name of a data lifecycle, e.g., Data Linkage
   * created_at - a timestamp indicating when a data lifecycle entry was created
