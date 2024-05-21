@@ -276,9 +276,7 @@ classDiagram
 
     class GovernanceSetPolicy{
         <<Enumeration>>
-        IRBDocumentation
         Law regulations and statutes
-        Privacy Board Documentation
         Process    
     }
 
@@ -336,15 +334,17 @@ classDiagram
         Limited Dataset
         Safe Harbor Method
         Deidentified Dataset
+        Data Provider
     }
 
     class GovernanceLeftOperand{
         <<enumaration>>
-        Access Path
+        Access Type
         Consent Requirement
         Data Requester
         Deidentification Method
         Linkage Method
+        Output
     }
 
     class PIIElement {
