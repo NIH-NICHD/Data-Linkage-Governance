@@ -11,7 +11,7 @@
   6. [Schema Components](#SchemaComponents)
 	 * 6.1. [ODRL Classes](#ODRLClasses)
 	 * 6.2. [Data Governance ODRL Profile](#DataGovernanceODRLProfile)
-         * 6.3. [Profile Terms and Definitions](#ProfileTermsAndDefinitions)
+	 * 6.3. [Profile Terms and Definitions](#ProfileTermsAndDefinitions)
   7. [Schema Requirements](#SchemaRequirements)
 	 * 7.1. [Must Support Requirements](#MustSupportRequirements)
 	 * 7.2. [May Support Requirements](#MaySupportRequirements)
