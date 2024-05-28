@@ -11,6 +11,7 @@
   6. [Schema Components](#SchemaComponents)
 	 * 6.1. [ODRL Classes](#ODRLClasses)
 	 * 6.2. [Data Governance ODRL Profile](#DataGovernanceODRLProfile)
+         * 6.3. [Profile Terms and Definitions](#ProfileTermsAndDefinitions)
   7. [Schema Requirements](#SchemaRequirements)
 	 * 7.1. [Must Support Requirements](#MustSupportRequirements)
 	 * 7.2. [May Support Requirements](#MaySupportRequirements)
@@ -521,17 +522,17 @@ The Data Governance Profile created in this project represents the extension to 
 * [Data Governance ODRL Profile Ontology](data_governance_ODRL_profile.rdf)
 * [Data Governance ODRL Profile Data Dictionary](DataDictionary.xlsx)
 
-### 6.3 Profile Terms and Definitions
+### 6.3. <a name='ProfileTermsAndDefinitions'>Profile Terms and Definitions
 
 The profile includes terms that represent different aspects of data governance, such as actions, parties, and different types of constraints (left operand and right operand). Each profile term is defined below organized by ODRL class.
 
-#### 6.3.1 Asset
+#### 6.3.1. Asset
 
 | Term | Label | Definition | Source |
 | ---- | ----- | ---------- | ------ |
 | **dataset** | Dataset | A collection of related data records. |  |
 
-#### 6.3.2 Policy Type
+#### 6.3.2. Policy Type
 
 | Term | Label | Definition | Source |
 | ---- | ----- | ---------- | ------ |
@@ -543,7 +544,7 @@ The profile includes terms that represent different aspects of data governance, 
 | **law** | Law (regulations and statutes) | A system of rules created and enforced by governmental bodies that regulate the behavior of individuals, organizations, and governmental entities. Inclusive of statutes and regulations. | https://w3c.github.io/dpv/dpv/#Law  |
 | **process** | Process  | A procedure that individuals are expected to adhere to or follow. | https://w3c.github.io/dpv/dpv/#Process |
 
-#### 6.3.3 Party
+#### 6.3.3. Party
 
 | Term | Label | Definition | Source |
 | ---- | ----- | ---------- | ------ |
@@ -563,14 +564,14 @@ The profile includes terms that represent different aspects of data governance, 
 | **privacyBoard** | Privacy Board | A group of individuals who review and approve research uses and disclosures of data to ensure that the privacy rights of research participants are protected. |  |
 | **reviewCommittee** | Review Committee | A group of individuals convened to review materials, provide approvals, and issue determinations on requested actions. |  |
 
-#### 6.3.4 Function
+#### 6.3.4. Function
 
 | Term | Label | Definition | Source |
 | ---- | ----- | ---------- | ------ |
 | **approvedParty** | Approved Party | The party receiving approval. |  |
 | **approvingParty** | Approving Party | The party providing approval. |  |
 
-#### 6.3.5 Action
+#### 6.3.5. Action
 
 | Term | Label | Definition | Source |
 | ---- | ----- | ---------- | ------ |
@@ -590,7 +591,7 @@ The profile includes terms that represent different aspects of data governance, 
 | **sign** | Sign | Signing a document or agreement. |  |
 | **submit** | Submit | To submit a document such as a form, application, or protocol. |  |
 
-#### 6.3.6 LeftOperand
+#### 6.3.6. LeftOperand
 
 | Term | Label | Definition | Source |
 | ---- | ----- | ---------- | ------ |
@@ -601,7 +602,7 @@ The profile includes terms that represent different aspects of data governance, 
 | **linkageMethod** | Linkage Method | The method used for linkage. Inclusive of PPRL and non-PPRL methods. |  |
 | **output** | Output | The result of a process. |  |
 
-#### 6.3.7 RightOperand
+#### 6.3.7. RightOperand
 
 | Term | Label | Definition | Source |
 | ---- | ----- | ---------- | ------ |
@@ -614,7 +615,7 @@ The profile includes terms that represent different aspects of data governance, 
 | **limitedDataset** | Limited Dataset | A set of information about a participant that excludes 16 direct identifiers specified in the HIPAA Privacy Rule and may be used or disclosed, for purposes of research, public health, or health care operations, without obtaining either a participant's Authorization or a waiver or an alteration of authorization for its use and disclosure, with a data use agreement. (modified from source: https://privacyruleandresearch.nih.gov/pr_08.asp)  |  |
 | **safeHarborMethod** | Safe Harbor Method | A method for deidentification by removal of 18 HIPAA identifiers. (modified from source: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#safeharborguidance) |  |
 
-#### 6.3.8 PII Elements
+#### 6.3.8. PII Elements
 
 | Term | Label | Definition | Source |
 | ---- | ----- | ---------- | ------ |
