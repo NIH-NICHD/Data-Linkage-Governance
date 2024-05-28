@@ -521,6 +521,123 @@ The Data Governance Profile created in this project represents the extension to 
 * [Data Governance ODRL Profile Ontology](data_governance_ODRL_profile.rdf)
 * [Data Governance ODRL Profile Data Dictionary](DataDictionary.xlsx)
 
+### 6.3 Profile Terms and Definitions
+
+The profile includes terms that represent different aspects of data governance, such as actions, parties, and different types of constraints (left operand and right operand). Each profile term is defined below organized by ODRL class.
+
+#### 6.3.1 Asset
+
+| Term | Label | Definition | Source |
+| ---- | ----- | ---------- | ------ |
+| **dataset** | Dataset | A collection of related data records. |  |
+
+#### 6.3.2 Policy Type
+
+| Term | Label | Definition | Source |
+| ---- | ----- | ---------- | ------ |
+| **certification** | Certification | An attestation that an official status has been earned by satisfying defined requirements, or the act of providing such a status, as proof that something has happened or defined standards have been met or will be upheld in the future.  | https://w3c.github.io/dpv/dpv/#Certification |
+| **consent** | Consent  | The IRB-approved written record that is in compliance with the Common Rule (45 CFR 46) and as applicable, Protection of Human Subjects rules (21 CFR 50), and is used to demonstrate the consent by a participant or guardian to participate in research. | https://w3c.github.io/dpv/dpv/#Consent |
+| **contract** | Contract | A contract is an agreement between parties, creating mutual obligations that are enforceable by law. (source: https://www.law.cornell.edu/wex/contract)  | https://w3c.github.io/dpv/dpv/#Contract |
+| **dataUseAgreement** | Data Use Agreement | A document which establishes who is permitted to use and receive data, and the permitted uses and disclosures of such information by the recipient. (modified from source: https://www.hhs.gov/hipaa/for-professionals/special-topics/emergency-preparedness/data-use-agreement/index.html)  |  |
+| **determination** | Determination | Outcome of a ruling or legal decision. |  |
+| **law** | Law (regulations and statutes) | A system of rules created and enforced by governmental bodies that regulate the behavior of individuals, organizations, and governmental entities. Inclusive of statutes and regulations. | https://w3c.github.io/dpv/dpv/#Law  |
+| **process** | Process  | A procedure that individuals are expected to adhere to or follow. | https://w3c.github.io/dpv/dpv/#Process |
+
+#### 6.3.3 Party
+
+| Term | Label | Definition | Source |
+| ---- | ----- | ---------- | ------ |
+| **certificationOrganization** | Certification Organization | An organization that grants or approves certifications or certificates. |  |
+| **dataAccessCommittee** | Data Access Committee | A group of individuals who review all requests for access to datasets from external requestors and is composed of individuals with expertise in science, policy, or bioinformatics resources. |  |
+| **dataCoordinatingCenter** | Data Coordinating Center | Academic and commercial data management and study oversight organizations, including contract research organizations, whose responsibilities include providing some or all the following services: study administration, financial management, protocol administration, data management, stakeholder communication and coordination, quality assurance, site monitoring, safety, regulatory, document management, post-study management, and close-out activities. (source:  https://www.niddk.nih.gov/-/media/Files/Research-Funding/Process/NIDDK-Guidance_DCC-Management-of-CCAs_Final_Version-1,-d-,1_OD-Approved_External-Website.pdf) |  |
+| **dataProvider** | Data Provider | Institutions, organizations, and researchers that collect data from research participants or that collect administrative data and may also submit the data to a repository for sharing. |  |
+| **dataRepository** | Data Repository | A physical location or virtual system for preserving, maintaining, and providing access to data. (modified from source: https://www.whitehouse.gov/wp-content/uploads/2022/05/05-2022-Desirable-Characteristics-of-Data-Repositories.pdf)  |  |
+| **dataRequester** | Data Requester | An individual or organization that requests access to a dataset that is not the participant. |  |
+| **disclosureReviewBody** | Disclosure Review Body | A group of individuals that establishes and operates processes and policies to ensure the public release of data products that do not reveal any information about the participants included in those datasets. |  |
+| **governmentOrganization** | Government Organization | An international, federal, state, tribal, or local government organization. Inclusive of departments or divisions within a larger government organization.  |  |
+| **guardian** | Guardian | An individual who is authorized under applicable State or local law to consent on behalf of a child to general medical care. Inclusive of a child’s biological or adoptive parent. (source: https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-46/subpart-D/section-46.402)  |  |
+| **iRB** | Institutional Review Board | An Institutional Review Board (IRB) is the institutional entity charged with providing ethical and regulatory oversight of research involving human subjects, typically at the site of the research study. (source: https://orwh.od.nih.gov/toolkit/human-subjects-protections/institutional-review-board)    |  |
+| **minorParticipant** | Minor Participant | Refers to children or participants who have not attained the legal age for consent to treatments or procedures involved in the research, under the applicable law of the jurisdiction in which the research will be conducted. (modified from source: https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/children-research/index.html)   |  |
+| **participant** | Participant | A healthy human or a patient who is or becomes a participant in research. (modified from source: https://policymanual.nih.gov/3014-001#C)  | https://w3c.github.io/dpv/dpv/#Participant |
+| **principalInvestigator** | Principal Investigator | The investigator with the overall responsibility for the designing, conducting, and reporting of the research, and must assure both the protocol and the research team’s actions are compliant with law, regulation, and NIH policy, even when certain aspects of the research are delegated to other investigators. (modified from source: https://ohsrp.nih.gov/confluence/display/ohsrp/Chapter+2+-+Roles+and+Responsibilities+of+the+Principal+Investigator#:~:text=The%20NIH%20Principal%20Investigator%20(PI,research%20to%20appropriately%20qualified%20individuals)  |  https://build.fhir.org/codesystem-research-study-party-role.html#research-study-party-role-primary-investigator |
+| **privacyBoard** | Privacy Board | A group of individuals who review and approve research uses and disclosures of data to ensure that the privacy rights of research participants are protected. |  |
+| **reviewCommittee** | Review Committee | A group of individuals convened to review materials, provide approvals, and issue determinations on requested actions. |  |
+
+#### 6.3.4 Function
+
+| Term | Label | Definition | Source |
+| ---- | ----- | ---------- | ------ |
+| **approvedParty** | Approved Party | The party receiving approval. |  |
+| **approvingParty** | Approving Party | The party providing approval. |  |
+
+#### 6.3.5 Action
+
+| Term | Label | Definition | Source |
+| ---- | ----- | ---------- | ------ |
+| **access** | Access | To acquire data from a data repository or other data sharing system.  | https://w3c.github.io/dpv/dpv/#Access  |
+| **approve** | Approve | To provide permission to perform the requested action. | https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C25425 |
+| **classify** | Classify | To organize data by relevant categories so that it may be used and protected more efficiently.  |  |
+| **collect** | Collect | The process of gathering and measuring information on variables of interest, in an established systematic fashion that enables one to answer stated research questions, test hypotheses, and evaluate outcomes. | https://w3c.github.io/dpv/dpv/#Collect  |
+| **completeTraining** | Complete Training | To complete training. |  |
+| **deidentify** | Deidentify  | To remove identifying information. De-identified data is participant information that has had personally identifiable information (PII; e.g. a participant’s name, email address, or social security number), including protected health information (PHI; e.g. medical history, test results, and insurance information) removed. This is normally performed when sharing the data from a registry or clinical study to prevent a participant from being directly or indirectly identified. (modified from source: https://toolkit.ncats.nih.gov/glossary/de-identified-patient-data/)  | https://w3c.github.io/dpv/dpv/#Deidentification |
+| **link** | Link | To combine information from a variety of data sources for the same participant. (source: https://hcup-us.ahrq.gov/datainnovations/raceethnicitytoolkit/or19.jsp) Synonymous with record linkage.  |  |
+| **makeDetermination** | Make Determination | To reach a decision or draw conclusions.  |  |
+| **obtainApproval** | Obtain Approval | To obtain verifiable approval to perform the requested action. | https://www.w3.org/TR/odrl-vocab/#term-obtainConsent |
+| **reidentify** | Reidentify | A general term for any process that re-establishes the relationship between identifying data and a participant. (modified from source: https://csrc.nist.gov/glossary/term/re_identification) |  |
+| **researchUse** | Research Use | Working with data for scientific research or other analytical purposes. |  |
+| **secondaryLink** | Secondary Link | To link a dataset for a secondary purpose distinct from the original or primary intended purpose. |  |
+| **share** | Share | The act of making an asset such as a dataset available for use by others. |  |
+| **sign** | Sign | Signing a document or agreement. |  |
+| **submit** | Submit | To submit a document such as a form, application, or protocol. |  |
+
+#### 6.3.6 LeftOperand
+
+| Term | Label | Definition | Source |
+| ---- | ----- | ---------- | ------ |
+| **accessType** | Access Type | The approach for making data available for use by others, for example open access or controlled access.  |  |
+| **consentRequirement** | Consent Requirement | A requirement to obtain consent from a participant or organization. |  |
+| **dataRequester** | Data Requester | An individual or organization that requests access to a dataset that is not the participant. |  |
+| **deidentificationMethod** | Deidentification Method | The method to remove the identifiers or any information that could directly identify a participant from a dataset to mitigate privacy risks to that participant. |  |
+| **linkageMethod** | Linkage Method | The method used for linkage. Inclusive of PPRL and non-PPRL methods. |  |
+| **output** | Output | The result of a process. |  |
+
+#### 6.3.7 RightOperand
+
+| Term | Label | Definition | Source |
+| ---- | ----- | ---------- | ------ |
+| **academicResearch** | Academic Research | Purposes associated with conducting or assisting with research conducted in an academic context e.g. within universities. |  |
+| **approvedPurpose** | Approved Purpose | The allowed activity or purpose for which the operator wishes to use the asset. |  |
+| **controlledAccess** | Controlled Access | Established processes for verifying appropriate use of shared data, such as requiring verification of requestor identity, committee approval of proposed research use, and signing a data use agreement to access protected data. (modified from source: https://grants.nih.gov/grants/guide/notice-files/NOT-OD-22-213.html) |  |
+| **dataEnclave** | Data Enclave | A secure network through which confidential data, such as identifiable information from census data, can be stored and disseminated. In a virtual data enclave a researcher can access the data from their own computer but cannot download or remove it from the remote server. Higher security data can be accessed through a physical data enclave where a researcher is required to access the data from a monitored room where the data is stored on non-network computers. (source: https://nnlm.gov/guides/data-thesaurus/data-enclave) | https://w3id.org/dpv#TrustedExecutionEnvironments |
+| **dataProvider** | Data Provider | Institutions, organizations, and researchers that collect data from research participants or that collect administrative data and may also submit the data to a repository for sharing. |  |
+| **deidentifiedDataset** | Deidentified Dataset | A set of information that has had personally identifiable information (PII; e.g. a person’s name, email address, or social security number), including identifying protected health information (PHI; e.g., medical history, test results, and insurance information) removed.  |  |
+| **limitedDataset** | Limited Dataset | A set of information about a participant that excludes 16 direct identifiers specified in the HIPAA Privacy Rule and may be used or disclosed, for purposes of research, public health, or health care operations, without obtaining either a participant's Authorization or a waiver or an alteration of authorization for its use and disclosure, with a data use agreement. (modified from source: https://privacyruleandresearch.nih.gov/pr_08.asp)  |  |
+| **safeHarborMethod** | Safe Harbor Method | A method for deidentification by removal of 18 HIPAA identifiers. (modified from source: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#safeharborguidance) |  |
+
+#### 6.3.8 PII Elements
+
+| Term | Label | Definition | Source |
+| ---- | ----- | ---------- | ------ |
+| **accountNumbers** | Account Numbers | The presence of the personally identifiable information element of an account number.  |  |
+| **anyOtherUniqueIdentifyingNumbersOrCodes** | Any Other Unique Identifying Numbers or Codes | The presence of any other personally identifiable information elements.  |  |
+| **biometricIdentifiers** | Biometric Identifiers | The presence of the personally identifiable information element of a biometric identifier.  |  |
+| **certificateLicenseNumbers** | Certificate License Numbers | The presence of the personally identifiable information element of a certificate license number.  |  |
+| **dates** | Dates | The presence of the personally identifiable information element of dates. Includes birth dates and death dates. |  |
+| **deviceIdentifiersAndSerialNumbers** | Device Identifiers and Serial Numbers | The presence of the personally identifiable information element of device identifiers and serial numbers.  |  |
+| **emailAddresses** | Email Addresses | The presence of the personally identifiable information element of an email address.  |  |
+| **faxNumbers** | Fax Numbers | The presence of the personally identifiable information element of a fax number. |  |
+| **fullFacePhotosAndComparableImages** | Full Face Photos and Comporable Images | The presence of the personally identifiable information element of a full face photo or comparable image.  |  |
+| **geographicData** | Geographic Data | The presence of the personally identifiable information elements of geographic data. Includes street address, city, state, zip code, or elements of a geocode. |  |
+| **healthPlanBeneficiaryNumbers** | Health Plan Beneficiary Numbers | The presence of the personally identifiable information element of a health plan beneficiary or member number.  |  |
+| **iPAddresses** | IP Addresses | The presence of the personally identifiable information element of an IP address.  |  |
+| **medicalRecordNumbers** | Medical Record Numbers (MRNs) | The presence of the personally identifiable information element of a medical record number.  |  |
+| **names** | Names | The presence of the personally identifiable information element of a name. Includes first, middle, and last name.   |  |
+| **phoneNumbers** | Phone Numbers | The presence of the personally identifiable information element of a phone number. |  |
+| **priorLinkage** | Prior Linkage | A set of information about prior linkages of a dataset.  |  |
+| **socialSecurityNumbers** | Social Security Numbers (SSNs) | The presence of the personally identifiable information element of a social security number. |  |
+| **uRLs** | URLs | The presence of the personally identifiable information element of a URL.  |  |
+| **vehicleIdentifiersAndSerialNumbers** | Vehicle Identifiers and Serial Numbers | The presence of the personally identifiable information element of vehicle identifiers and serial numbers.  |  |
+
 ##  7. <a name='SchemaRequirements'></a>Schema Requirements
 
 ###  7.1. <a name='MustSupportRequirements'></a>Must Support Requirements
