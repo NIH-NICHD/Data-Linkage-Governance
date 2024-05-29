@@ -277,7 +277,7 @@ classDiagram
 
     class GovernanceSetPolicy{
         <<Enumeration>>
-        Law regulations and statutes
+        Law
         Process    
     }
 
