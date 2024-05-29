@@ -534,6 +534,8 @@ The profile includes terms that represent different aspects of data governance, 
 
 #### 6.3.2. Policy Type
 
+Includes instances of agreement and set.
+
 | Term | Label | Definition |
 | ---- | ----- | ---------- |
 | **certification** | Certification | An attestation that an official status has been earned by satisfying defined requirements, or the act of providing such a status, as proof that something has happened or defined standards have been met or will be upheld in the future. |
@@ -564,7 +566,9 @@ The profile includes terms that represent different aspects of data governance, 
 | **privacyBoard** | Privacy Board | A group of individuals who review and approve research uses and disclosures of data to ensure that the privacy rights of research participants are protected. |
 | **reviewCommittee** | Review Committee | A group of individuals convened to review materials, provide approvals, and issue determinations on requested actions. |
 
-#### 6.3.4. Function
+#### 6.3.4. Party Function
+
+Party functions are properties designed to represent the conceptional relation between parties.
 
 | Term | Label | Definition |
 | ---- | ----- | ---------- |
@@ -591,7 +595,7 @@ The profile includes terms that represent different aspects of data governance, 
 | **sign** | Sign | Signing a document or agreement. |
 | **submit** | Submit | To submit a document such as a form, application, or protocol. |
 
-#### 6.3.6. LeftOperand
+#### 6.3.6. LeftOperand of Constraint
 
 | Term | Label | Definition |
 | ---- | ----- | ---------- |
@@ -602,7 +606,7 @@ The profile includes terms that represent different aspects of data governance, 
 | **linkageMethod** | Linkage Method | The method used for linkage. Inclusive of PPRL and non-PPRL methods. |
 | **output** | Output | The result of a process. |
 
-#### 6.3.7. RightOperand
+#### 6.3.7. RightOperand of Constraint
 
 | Term | Label | Definition |
 | ---- | ----- | ---------- |
@@ -615,7 +619,7 @@ The profile includes terms that represent different aspects of data governance, 
 | **limitedDataset** | Limited Dataset | A set of information about a participant that excludes 16 direct identifiers specified in the HIPAA Privacy Rule and may be used or disclosed, for purposes of research, public health, or health care operations, without obtaining either a participant's Authorization or a waiver or an alteration of authorization for its use and disclosure, with a data use agreement. (modified from source: https://privacyruleandresearch.nih.gov/pr_08.asp) |
 | **safeHarborMethod** | Safe Harbor Method | A method for deidentification by removal of 18 HIPAA identifiers. (modified from source: https://www.hhs.gov/hipaa/for-professionals/privacy/special-topics/de-identification/index.html#safeharborguidance) |
 
-#### 6.3.8. PII Elements
+#### 6.3.8. Elements of Personally Identifiable Information
 
 | Term | Label | Definition |
 | ---- | ----- | ---------- |
