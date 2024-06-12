@@ -669,25 +669,25 @@ policy:
     target: DATASET_A
     permission:
       - action: access
-        assigner: DataRequester
-        assignee: PrincipalInvestigator
+        assigner: DataProvider
+        assignee: DataRequester
         duty:
         - action: sign
-          contractedParty: DataRequester
+          assignee: DataRequester
 
-  - type: Agreement
+  - type: Process
     title: DATASET_A Designated Agent Form
     uid: DATASET_ADesignatedAgentForm
     profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
     target: DATASET_A
     obligation:
       - action: submit
-        contractedParty: DataRequester
+        assignee: DataRequester
 ```
 ###  8.2. Example B: Health Center IRB authorizes data linkage for DATASET_B; data requesters must obtain permission for linkage from Health Center IRB
 ```yaml
 policy:
-  - type: Agreement - IRB Documentation
+  - type: Policy 
     title: DATASET_B IRB Policy
     uid: DATASET_BIrbPolicy
     profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
@@ -716,13 +716,13 @@ policy:
         assignee: DataRequester
         duty:
          - action: sign
-            assignee: DataRequester
+           assignee: DataRequester
 
 ```
 ###  8.4. Example D: Research network sites authorize linkage for DATASET_D on a study-by-study basis; data requestor must obtain permission to link datasets from each data contributing site
 ```yaml
 policy:
-  - type: Process
+  - type: Policy
     title: DATASET_D Linkage Study Participation Policy
     uid: DATASET_DLinkageStudyParticipationPolicy
     profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
@@ -748,7 +748,7 @@ policy:
 ###  8.6. Example F: Assent from child authorizes sharing DATASET_F
 ```yaml
 policy:
-  - type: Agreement
+  - type: Consent
     title: DATASET_F Assent
     uid: DATASET_FAssent
     profile: https://github.com/NIH-NICHD/Data-Linkage-Governance
