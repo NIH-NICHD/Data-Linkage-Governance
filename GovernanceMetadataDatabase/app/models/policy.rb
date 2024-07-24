@@ -1,8 +1,8 @@
 class Policy < ApplicationRecord
 
   # List of supported Policies
-  TYPES = ['Agreement', 'Certification', 'Consent', 'Contract', 'DataUseAgreement', 'Determination', 'IRBDocumentation',
-           'Law', 'Policy', 'PrivacyBoardDocumentation', 'Process', 'Request']
+  TYPES = ['Agreement', 'Certification', 'Consent', 'Contract', 'DataUseAgreement', 'Determination',
+           'Law', 'Policy', 'Process', 'Request']
 
 
   self.inheritance_column = nil # Allows us to use 'type' as a column

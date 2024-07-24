@@ -1,7 +1,7 @@
 class Constraint < ApplicationRecord
 
   # List of supported operands and operators
-  LEFT_OPERANDS = ['careType', 'recipient', 'virtualLocation', 'product', 'purpose', 'accessPath', 'consentRequirement', 'dataRequester',
+  LEFT_OPERANDS = ['careType', 'recipient', 'virtualLocation', 'output', 'purpose', 'accessType', 'consentRequirement', 'dataRequester',
                    'deidentificationMethod', 'linkageMethod']
 
   OPERATORS = ['eq']

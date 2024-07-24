@@ -50,6 +50,10 @@ def extract_sources(cell)
   return cell.to_s.strip.split(/\n+/).map do |row|
     if link_info = row.to_s.match(/(https?:\/\/[^\s]+)\s+\(Accessed: ([0-9\/]+)\)/)
       { 'link' => link_info[1], 'accessed' => link_info[2] }
+    elsif link_info = row.to_s.match(/^(https?:\/\/[^\s]+)/)
+      { 'link' => link_info[1] }
+    elsif link_info = row.to_s.match(/([^:]+):\s*(https?:\/\/[^\s]+)/)
+      { 'name' => link_info[1], 'link' => link_info[2] }
     else
       # Not a link, so just return the text as the name of the source
       { 'name' => row }
@@ -102,13 +106,14 @@ namespace :data do
       policy_requirements = []
 
       # Each sheet has dataset information in the same place
-      name = sheet.rows.drop(2).first["A3"].sub(/Dataset [0-9]+ - /, '')
+      name = sheet.rows.drop(2).first["A3"].sub(/Dataset [0-9]+ - /, '').strip
       puts "Importing data for #{name}"
       dataset = Dataset.find_or_create_by(name: name) do |d|
         d.source = sheet.rows.drop(3).first['C4']
         d.source_agency = sheet.rows.drop(4).first['C5']
         d.dataset_type = sheet.rows.drop(5).first['C6']
         d.information_sources = sheet.rows.drop(6).first['C7'].split(/;\s+/)
+        d.description = sheet.rows.drop(7).first['C8'].split(/\n+/).first
       end
 
       # Go through each row looking for sections of data that we want to process
@@ -192,7 +197,8 @@ namespace :data do
               if annotations[function]
                 party = annotations[function].camelize
                 puts "  WARNING: Unknown party type #{party}" unless Party::TYPES.include?(party)
-                assigned_policy_types = ['Consent', 'Determination', 'Law', 'Policy', 'Certification', 'IRBDocumentation', 'Request']
+                assigned_policy_types = ['Agreement', 'Consent', 'DataUseAgreement', 'Determination', 'Law', 'Policy', 'Certification',
+                                         'IRBDocumentation', 'Request']
                 if ['assigner', 'assignee'].include?(function) && !assigned_policy_types.include?(policy.type)
                   puts "  WARNING: #{function} seen with #{policy.type} but is typically only used with #{assigned_policy_types.to_sentence}"
                 end
@@ -215,7 +221,9 @@ namespace :data do
 
             # A rule might have a duty as a sub-rule
             if annotations['duty']
-              duty = rule.duties.find_or_create_by(action: annotations['duty'], type: 'Duty')
+              action = annotations['duty']
+              puts "  WARNING: Unknown duty #{action} found" unless Rule::ACTIONS.include?(action)
+              duty = rule.duties.find_or_create_by(action: action, type: 'Duty')
               Function::TYPES.each do |function|
                 if annotations['duty_' + function]
                   party = annotations['duty_' + function].camelize
@@ -280,6 +288,25 @@ namespace :data do
         required_policy = Policy.where(name: requirement[:required_policy_name]).first
         raise "Cannot find required policy #{requirement[:required_policy_name]}" unless required_policy
         Requirement.find_or_create_by(requiring_policy: requirement[:requiring_policy], required_policy: required_policy)
+      end
+
+      # Now that we're done with this dataset 1) look for any agreements that use contractedParty or contractingParty
+      dataset.policies.where(type: ['Agreement', 'DataUseAgreement']).each do |policy|
+        if policy.rules.any? { |rule| rule.functions.where(type: ['contractingParty', 'contractedParty']).present? }
+          puts "  WARNING: Policy \"#{policy.name}\" uses contract functions rather than assignment functions"
+        end
+      end
+
+      # And 2) look for anything that should be signed or submitted that does not have a duty to sign or submit
+      dataset.policies.where(type: ['Agreement', 'DataUseAgreement', 'Contract']).each do |policy|
+        unless policy.rules.all? { |r| r.duties.where(action: 'sign').present? }
+          puts "  WARNING: Policy \"#{policy.name}\" is missing a duty to sign"
+        end
+      end
+      dataset.policies.where(type: ['Request']).each do |policy|
+        unless policy.rules.all? { |r| r.duties.where(action: 'submit').present? }
+          puts "  WARNING: Policy \"#{policy.name}\" is missing a duty to submit"
+        end
       end
 
     end
