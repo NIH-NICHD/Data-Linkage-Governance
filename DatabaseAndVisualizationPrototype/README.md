@@ -99,7 +99,7 @@ bundle exec foreman start -f Procfile.dev
 
 Once running the query tool portion of the application will be available at
 
-    http://localhost:5100/vis/#/
+    http://localhost:5100/
 
 and the visualization prototype portion of the application will be available at
 
