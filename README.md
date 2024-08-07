@@ -26,13 +26,13 @@ These project materials and resources will help researchers and data stewards en
 
 * A landscape analysis that identifies existing governance-relevant standards that could be used in a data governance metadata schema. For the full report, visit the [Governance Metadata Standards: Landscape and Gap Analysis](LandscapeAnalysis.md).
   
-* A governance assessment report that documents an analysis of data governance requirements for linking 11 high-priority HHS and other federally funded datasets, based on three theoretical pediatric COVID-19 research use cases. For the full report, visit PCORTF Pediatric Record Linkage Governance Assessment Report.
+* A governance assessment report that documents an analysis of data governance requirements for linking 11 high-priority HHS and other federally funded datasets, based on three theoretical pediatric COVID-19 research use cases. For the full report, visit [PCORTF Pediatric Record Linkage Governance Assessment Report](https://www.nichd.nih.gov/sites/default/files/inline-files/PCORTF_Pediatric_Record_Linkage_Governance_Assessment_Formatted120423.pdf).
 
-* A relational database and query tool that encodes and makes available governance metadata from the 11 high-priority HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata. _In progress._
+* A governance data collection tool to enable researchers or other stakeholders to enter, store, and communicate dataset-level consent, policy, regulatory, and other governance information as metadata in a standard format to inform decisions about data linkages. _In progress._
 
-* A prototype data governance metadata search and visualization tool that will inform researchers how datasets of interest can be linked and used. _In progress._
-  
-* A prototype data governance metadata collection tool to enable researchers or other stakeholders to enter, store, and communicate dataset-level consent, policy, regulatory, and other governance information as metadata in a standard format to inform decisions about data linkages. _In progress._
+* A [relational database and query tool](DatabaseAndVisualizationPrototype) that encodes and makes available governance metadata from the 11 high-priority HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata.
+
+* A [data governance visualization prototype](DatabaseAndVisualizationPrototype) that displays governance information at the dataset level to support decision making about linking datasets for research.
 
 
 ## Contact Information
