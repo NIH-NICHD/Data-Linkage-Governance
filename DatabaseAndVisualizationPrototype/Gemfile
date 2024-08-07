@@ -4,7 +4,7 @@ ruby "3.2.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
-
+gem "vite_rails"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -68,6 +68,9 @@ group :development do
 
   # Generate mermaid entity relation diagrams
   gem "rails-mermaid_erd"
+
+  # For running Procfile.dev in development
+  gem "foreman"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
