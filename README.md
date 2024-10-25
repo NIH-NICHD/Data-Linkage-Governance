@@ -28,11 +28,12 @@ These project materials and resources will help researchers and data stewards en
   
 * A governance assessment report that documents an analysis of data governance requirements for linking 11 high-priority HHS and other federally funded datasets, based on three theoretical pediatric COVID-19 research use cases. For the full report, visit [PCORTF Pediatric Record Linkage Governance Assessment Report](https://www.nichd.nih.gov/sites/default/files/inline-files/PCORTF_Pediatric_Record_Linkage_Governance_Assessment_Formatted120423.pdf).
 
-* A governance data collection tool to enable researchers or other stakeholders to enter, store, and communicate dataset-level consent, policy, regulatory, and other governance information as metadata in a standard format to inform decisions about data linkages. _In progress._
+In Progress:
+* A governance data collection tool to enable researchers or other stakeholders to enter, store, and communicate dataset-level consent, policy, regulatory, and other governance information as metadata in a standard format to inform decisions about data linkages. 
 
-* A [relational database and query tool](DatabaseAndVisualizationPrototype) that encodes and makes available governance metadata from the 11 high-priority HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata.
+* A relational database and query tool that encodes and makes available governance metadata from the 11 high-priority HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata.
 
-* A [data governance visualization prototype](DatabaseAndVisualizationPrototype) that displays governance information at the dataset level to support decision making about linking datasets for research.
+* A data governance visualization prototype that displays governance information at the dataset level to support decision making about linking datasets for research.
 
 
 ## Contact Information
