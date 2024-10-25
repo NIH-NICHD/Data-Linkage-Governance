@@ -24,7 +24,7 @@ These project materials and resources will help researchers and data stewards en
 
 * A report of considerations for linking datasets in a federated data ecosystem based on findings from existing record linkage implementations. For the full report, visit [Privacy Preserving Record Linkage (PPRL) for Pediatric COVID-19 Studies](https://www.nichd.nih.gov/sites/default/files/inline-files/NICHD_ODSS_PPRL_for_Pediatric_COVID-19_Studies_Public_Final_Report_508.pdf).
 
-* A landscape analysis that identifies existing governance-relevant standards that could be used in a data governance metadata schema. For the full report, visit the [Governance Metadata Standards: Landscape and Gap Analysis](LandscapeAnalysis.md).
+* A landscape analysis that identifies existing governance-relevant standards that could be used in a data governance metadata schema. For the full report, visit the [Governance Metadata Standards: Landscape and Gap Analysis](https://www.nichd.nih.gov/sites/default/files/inline-files/Governance_Metadata_Standards_FINAL_revb.pdf).
   
 * A governance assessment report that documents an analysis of data governance requirements for linking 11 high-priority HHS and other federally funded datasets, based on three theoretical pediatric COVID-19 research use cases. For the full report, visit [PCORTF Pediatric Record Linkage Governance Assessment Report](https://www.nichd.nih.gov/sites/default/files/inline-files/PCORTF_Pediatric_Record_Linkage_Governance_Assessment_Formatted120423.pdf).
 
