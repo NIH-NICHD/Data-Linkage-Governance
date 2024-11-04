@@ -47,12 +47,15 @@ const SelectDatasets = () => {
         }
     }
 
+    // We want to sanitize the search string so that it can safely be used as a regexp, and then filter the
+    // datasets against that regexp
+    const sanitizedSearchString = searchString.toLowerCase().replaceAll(/\W/g, '.');
     const displayedDatasets = (state.datasets || []).filter(dataset => {
         return (searchString.length === 0 ||
-                dataset.name && dataset.name.toLowerCase().match(searchString.toLowerCase()) ||
-                dataset.dataset_type && dataset.dataset_type.toLowerCase().match(searchString.toLowerCase()) ||
-                dataset.source && dataset.source.toLowerCase().match(searchString.toLowerCase()) ||
-                dataset.description && dataset.description.toLowerCase().match(searchString.toLowerCase()));
+                dataset.name && dataset.name.toLowerCase().match(sanitizedSearchString) ||
+                dataset.dataset_type && dataset.dataset_type.toLowerCase().match(sanitizedSearchString) ||
+                dataset.source && dataset.source.toLowerCase().match(sanitizedSearchString) ||
+                dataset.description && dataset.description.toLowerCase().match(sanitizedSearchString));
     });
 
     return (
@@ -66,7 +69,7 @@ const SelectDatasets = () => {
                             {(state?.selectedDatasets?.length || 0) > 0 && ` – You have selected ${state?.selectedDatasets?.length} dataset${(state?.selectedDatasets?.length || 0) !== 1 ? 's' : ''}`}
                         </Typography>
                         <Typography variant="p" sx={{fontSize: '18px'}}>
-                            Get started by choosing the datasets you would like to include in a linkage implementation.
+                            Get started by choosing datasets to browse governance information.
                             Datasets with governance information are listed below including the dataset source, a brief description, and
                             <Chip size="small" avatar={<Avatar sx={{ bgcolor: 'white' }}>{'N'}</Avatar>} label={'Policy Type'} sx={{ ml: 1, mr: 1, bgcolor: '#1c6b3e', color: 'white' }} />
                             showing the counts of relevant governance policies categorized by type.

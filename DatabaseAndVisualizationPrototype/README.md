@@ -30,7 +30,7 @@ These capabilities require:
 
 * Ruby 3.2.2
 * PostgreSQL 15.6
-* Rails 7.1.2
+* Rails 7.1.4
 
 ## Setup for development
 
@@ -174,7 +174,12 @@ NOTE: The rails gem used to generate the mermaid diagram does not support use of
 `has_many :through`, so those lines of code need to be temporarily commented out in the model source
 files in `app/models/` when generating the mermaid diagram.
 
-## License
+# Containerization
+
+A [Dockerfile](./Dockerfile) is included that will build a Docker image that can be used for
+deploying this tool.
+
+# License
 
 Copyright 2024 The MITRE Corporation
 
@@ -190,7 +195,7 @@ distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, e
 implied. See the License for the specific language governing permissions and limitations under the
 License.
 
-### Contact Information
+## Contact Information
 
 For questions or comments about this project, please send email to
 

@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
 import { VizContext } from '../../reducer/VizContextProvider';
 import { getActionIcon, getDatasetPolicyTypeLookup, getDatasetPolicyTypes, humanizeConstraint, humanizeRule, palette } from '../../util/util';
 import { Grid, Stack, Link, Tooltip, styled } from '@mui/material';
@@ -64,8 +65,7 @@ function Row(props) {
   const renderPolicyContent = (policy, setModalContent) => {
     return <PolicyTile
       hasProhibition={policy.prohibitions.length > 0}
-      hasPermissionContraint={policy.hasPermissionContraint
-      }
+      hasPermissionContraint={policy.hasPermissionContraint}
       borderc={palette[row.name]}>
       <Grid container>
         <Grid item xs={12} sx={{ fontWeight: 'bold' }}>
@@ -76,7 +76,9 @@ function Row(props) {
             <Grid item xs={12} sx={{ textAlign: 'left' }}>
               <Link sx={{ cursor: 'pointer' }} onClick={() => setModalContent({ policy: policy.policy, rule: rule })}>
                 <Stack justifyContent={'left'} direction={'row'} alignItems={'center'}>
-                  <div style={{ marginRight: '10px' }}>{getActionIcon(rule.action)}</div>{humanizeRule(rule)}
+                    <div style={{ marginRight: '10px' }}>{getActionIcon(rule.action)}</div>
+                    {humanizeRule(rule)}
+                    {rule.type === 'Prohibition' && <DoNotDisturbIcon sx={{color: '#dd1c1c' }} />}
                 </Stack>
               </Link>
               <BulletedList items={rule.constraints} itemModifier={humanizeConstraint}></BulletedList>
@@ -137,9 +139,18 @@ export default function DatasetGrid() {
         Compare Governance Information
       </Typography>
             <Typography variant="subtitle1" gutterBottom sx={{mb: 4, fontSize: '18px', marginBottom: '8px'}}>
-            For the datasets selected, all governance policies are displayed below, organized by policy type. A policy is a formal statement of intent or plan of action that is adopted by an organization and defines specific procedures, rules, or regulations that individuals are expected to adhere to or follow. 
-            Datasets are presented as columns and each <MiniMarker /> represents one governance policy for that dataset. View the distribution of <MiniMarker /> to visually assess the volume and diversity of policies. Hover over a <MiniMarker /> to see the name of the policy. Click on <KeyboardArrowDownIcon /> next to each policy type to expand the row and show the policy names and rules.
-            Rules are permissions or prohibitions of a specified action. Policy types range from very defined (e.g., data use agreement) to broad (e.g., policy); broad policy types can include diverse policy content. A blank cell means that no policy content of that policy type was identified from that dataset. Click show all policy types at the bottom of the page to expand all rows and display all policy details.
+                For the datasets selected, all governance
+                policies <InfoIcon sx={{ ml: '-5px', mr: '5px', mb: '4px' }} onClick={(event) => {
+                                       event.stopPropagation();
+                                       dispatch({
+                                           type: actionTypes.updateGlossary,
+                                           value: true,
+                                           searchValue: 'Policy'
+                                       })
+                                   }} />
+                are displayed below, organized by policy type.
+                Datasets are presented as columns and each <MiniMarker /> pill represents one governance policy for that dataset. View the distribution of <MiniMarker /> pills to visually assess the volume and diversity of policies. Hover over a <MiniMarker /> pill to see the name of the policy. Click on <KeyboardArrowDownIcon /> next to each policy type to expand the row and show the policy names and rules.
+                Rules are permissions or prohibitions of a specified action. Policy types range from very defined (e.g., data use agreement) to broad (e.g., policy); broad policy types can include diverse policy content. A blank cell means that no policy content of that policy type was identified from that dataset. Click show all policy types at the bottom of the page to expand all rows and display all policy details.
             </Typography>
       <SelectedDatasetDisplay />
 

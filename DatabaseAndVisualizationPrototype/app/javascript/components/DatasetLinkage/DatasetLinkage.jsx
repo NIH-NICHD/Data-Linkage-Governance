@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Stack, Typography, Table, TableBody, TableContainer } from '@mui/material';
+import { SubdirectoryArrowRight } from '@mui/icons-material';
 import { VizContext } from '../../reducer/VizContextProvider';
 import { datasetActionTypes, getDatasetPolicyActionLookup } from '../../util/util';
 import SelectedDatasetDisplay from '../Common/SelectedDatasetDisplay';
@@ -31,7 +32,7 @@ const DatasetLinkage = (props) => {
         </Typography>
         <Typography gutterBottom variant="subtitle1" sx={{mb: 4, fontSize: '18px', marginBottom: '8px'}}>
             To determine if selected datasets can be linked, review permissions and prohibitions for  dataset linkage, sharing, access, and use.
-            This prototype does not provide a determination of linkage. Rather, the left-hand column presents the permissions, prohibitions, and required conditions that must be met for each action (linkage, sharing, access, and use).
+            This prototype does not provide a determination of linkage. Rather, the left-hand column presents the permissions, prohibitions, and required conditions <SubdirectoryArrowRight fontSize="small" sx={{ color: 'gray' }}/> that must be met for each action (linkage, sharing, access, and use).
         
             The center matrix displays the policies that provide those permissions or prohibitions.
             There may be zero, one, or multiple policies that address each action.

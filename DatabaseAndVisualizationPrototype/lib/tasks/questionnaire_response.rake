@@ -142,12 +142,12 @@ def create_policy(dataset, policy_data)
       when 'The dataset may only be accessed in a data enclave'
         rule.constraints.find_or_create_by(left_operand: 'virtualLocation', operator: 'eq', right_operand: 'DataEnclave')
       when 'The dataset may only be accessed in a controlled environment'
-        rule.constraints.find_or_create_by(left_operand: 'virtualLocation', operator: 'eq', right_operand: 'ControlledAccess')
+        rule.constraints.find_or_create_by(left_operand: 'accessType', operator: 'eq', right_operand: 'ControlledAccess')
       when 'This dataset may only be used for the approved purpose',
            'This dataset may only be used for an approved purpose'
         rule.constraints.find_or_create_by(left_operand: 'purpose', operator: 'eq', right_operand: 'ApprovedPurpose')
       when 'This dataset may only be used for research on a specific topic'
-        rule.constraints.find_or_create_by(left_operand: 'purpose', operator: 'eq', right_operand: 'ApprovedPurpose')
+        rule.constraints.find_or_create_by(left_operand: 'purpose', operator: 'eq', right_operand: 'AcademicResearch')
       else
         raise "Encountered unknown condition: #{condition}"
       end

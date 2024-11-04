@@ -3,8 +3,8 @@ import { Stack, Link, TableRow } from '@mui/material';
 import { humanizeConstraint, getPolicyLabel, actionDict } from '../../util/util';
 import { CustomTableCell, AdjustableTypography } from './styles';
 import { SubdirectoryArrowRight } from '@mui/icons-material';
-
 import DoNotDisturbIcon from '@mui/icons-material/DoNotDisturb';
+
 // rendering component for the header of each action body 
 // accepts two props, the ruleDict which is a data structure 
 // containing the datasets and their list of rules, and the action

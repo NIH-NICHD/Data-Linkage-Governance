@@ -12,8 +12,6 @@ erDiagram
     %% Restore Hash: #eyJzZWxlY3RNb2RlbHMiOlsiQ29uc3RyYWludCIsIkRhdGFMaWZlY3ljbGUiLCJEYXRhc2V0IiwiRnVuY3Rpb24iLCJQYXJ0eSIsIlBvbGljeSIsIlBvbGljeUNvbW1lbnRhcnkiLCJQcmlvckxpbmthZ2UiLCJSZXF1aXJlbWVudCIsIlJ1bGUiLCJTb3VyY2UiXSwiaXNQcmV2aWV3UmVsYXRpb25zIjpmYWxzZSwiaXNTaG93UmVsYXRpb25Db21tZW50IjpmYWxzZSwiaXNTaG93S2V5IjpmYWxzZSwiaXNTaG93Q29tbWVudCI6ZmFsc2UsImlzSGlkZUNvbHVtbnMiOmZhbHNlfQ==
     %% --------------------------------------------------------
 
-    %%{init: {"themeCSS": ["[id*=Policy-] .er.entityBox { fill: orange; }; [id*=Rule-] .er.entityBox { fill: orange; }; [id*=Constraint-] .er.entityBox { fill: orange; };[id*=Party-] .er.entityBox { fill: orange; };"]}}%%
-
     %% table name: constraints
     Constraint {
         integer id  
@@ -44,6 +42,7 @@ erDiagram
         jsonb pii_elements  
         string pii_elements_holder  
         string common_data_model  
+        text description  
         datetime created_at  
         datetime updated_at  
     }
@@ -163,6 +162,7 @@ The current data model describes these data elements:
   * pii_elements - the personally identifiable information (PII) elements collected in a dataset, regardless of whether the PII are shared, e.g., first name, last name
   * pii_elements_holder - the holder of the PII elements in a dataset, e.g., N3C data partners
   * common_data_model - the common data model used by a dataset, e.g., OMOP
+  * description - the description of the dataset
   * created_at - a timestamp indicating when a dataset entry was created
   * updated_at - a timestamp indicating when a dataset entry was last updated
 
