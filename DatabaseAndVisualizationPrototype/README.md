@@ -34,11 +34,12 @@ These capabilities require:
 
 ## Setup for development
 
-After installing Ruby and PostgreSQL, and with a local copy of this repository, set up the
-initial blank database using the following steps:
+After installing Ruby and PostgreSQL, and with a local copy of this repository, install dependencies
+and set up the initial blank database using the following steps:
 
 ```
 bundle install
+npm install
 rails db:create
 rails db:migrate
 ```

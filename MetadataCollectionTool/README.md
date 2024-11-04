@@ -43,10 +43,12 @@ These capabilities depend on
 
 ## Setup for Development
 
-With a local copy of this repository you can set up the initial blank database using the following steps:
+With a local copy of this repository you can install dependencies and set up the initial blank
+database using the following steps:
 
 ```
 bundle install
+npm install
 rails db:create
 rails db:migrate
 ```
