@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Metadata Collection Tool</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="p-3 text-bg-dark mb-3">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="<%= root_path %>" class="nav-link px-2 text-white fs-3 me-auto">Metadata Collection Tool</a>
+            <%= @questionnaire_version_and_date %>
+          </div>
+        </div>
+      </header>
+      <%= yield %>
+    </div>
+  </body>
+</html>
