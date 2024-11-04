@@ -788,7 +788,6 @@ Contributors include:
 - Office of the Assistant Secretary for Planning and Evaluation, U.S. Department of Health and Human Services. Building Data Capacity for Patient-Centered Outcomes Research. Office of the Secretary Patient Centered Outcomes Research Trust Fund Strategic Plan: 2020-2029. [Internet]. 2022 September. Available from: https://aspe.hhs.gov/sites/default/files/documents/b363671a6256c6b7f26dec4990c2506a/aspe-os-pcortf-2020-2029-strategic-plan.pdf
 
 ##  10. License
-Copyright 2024 The MITRE Corporation
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -817,3 +816,11 @@ No other use other than that granted to the U. S. Government, or to those acting
 For further information, please contact The MITRE Corporation, Contracts Management Office, 7515 Colshire Drive, McLean, VA  22102-7539, (703) 983-6000.
 
 Copyright 2024 The MITRE Corporation.
+
+This software or document includes material copied from or derived from [ODRL Information Model 2.2](https://www.w3.org/TR/odrl-model/). Copyright © 2018 W3C® (MIT, ERCIM, Keio, Beihang).
+
+This software or document includes material copied from or derived from [Data Privacy Vocabulary (DPV)](https://w3c.github.io/dpv/2.0/dpv/). Copyright © 2024 the Contributors to the Data Privacy Vocabulary (DPV) Specification.
+
+This software or document includes material copied from or derived from [SKOS Simple Knowledge Organization System Reference](https://www.w3.org/TR/skos-reference/). Copyright © 2009 W3C® (MIT, ERCIM, Keio, Beihang).
+
+This software or document includes material copied from or derived from [DCMI Metadata Terms](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/) (issued on 2020-01-20 as a DCMI Recommendation) under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). Copyright © 1995-2024 Dublin Core™ Metadata Initiative.
