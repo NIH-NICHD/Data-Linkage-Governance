@@ -32,7 +32,7 @@ These project materials and resources will help researchers and data stewards en
 
 * A relational database and query tool that encodes and makes available governance metadata from the 11 high-priority HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata.
 
-* A data governance visualization prototype that displays governance information at the dataset level to support decision making about linking datasets for research.
+* A [data governance visualization prototype](https://github.com/NIH-NICHD/Data-Linkage-Governance/blob/main/governance-metadata-visualization-2024-11-04.html) that displays governance information at the dataset level to support decision making about linking datasets for research.
 
 
 ## Contact Information
