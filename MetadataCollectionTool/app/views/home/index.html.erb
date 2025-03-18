@@ -1,0 +1,108 @@
+<p>Welcome <%= @user_email %></p>
+
+<p>
+  NICHD ODSS has developed a robust metadata schema for data governance information relevant to
+  linking individual-level participant data and sharing and using linked datasets.  The metadata
+  schema will enable the development of tools to collect, standardize, exchange, information about
+  data governance, including consent, policies, laws, and other rules.
+</p>
+
+<p>
+  This data collection proof of concept pilot tool is designed to collect governance information
+  about a dataset and transform questionnaire responses into structured data governance
+  metadata. The intended use of structured governance metadata is to facilitate the determination of
+  whether a dataset can be linked (combined with data from other sources that relate to the same
+  person) and if so, what rules flow down to the linked dataset.
+</p>
+
+<p>
+  The questionnaire begins by collecting basic dataset information and guides the user through a
+  series of questions to extract governance information about the policies, rules, and constraints
+  within those rules. Questionnaire navigation is guided by five phases of the data lifecycle:
+  dataset collection, dataset linkage, dataset sharing, and secondary dataset access and dataset
+  use. The effort and time required to complete the questionnaire will depend on the amount of
+  governance information that applies to the dataset. The questionnaire is configured to limit the
+  number of questions based on earlier responses. Recognizing that users may be aware of only some
+  governance information and policies for a given dataset, the questionnaire allows users to record
+  values as unknown or enter custom values throughout. Additionally, the questionnaire allows users
+  to note when a policy does not clearly address a topic. Recognizing that governance information
+  can be fragmented across multiple individuals at a single institution, the tool allows users to
+  transfer a questionnaire to others for review or completion.
+</p>
+
+<p>You can start by beginning a new questionnaire response:</p>
+
+<p><%= link_to 'Begin a New Questionnaire', new_questionnaire_response_path, method: :get, class: 'btn btn-dark' %></p>
+
+<% if @responses.present? %>
+
+  <p> You can also continue responding to a questionnaire that you began previously:</p>
+
+  <table class='table'>
+    <thead>
+      <tr><th>Dataset Name</th><th>Date Created</th><th>Date Last Updated</th><th>Transfer</th><th>Continue</th><tr>
+    </thead>
+    <tbody>
+      <% @responses.each do |response| %>
+        <tr>
+          <td><%= response.dataset_name %></td>
+          <td><%= response.created_at.to_formatted_s(:long) %></td>
+          <td><%= response.updated_at.to_formatted_s(:long) %></td>
+          <td><%= link_to 'Transfer', questionnaire_response_transfer_edit_path(response), class: 'btn btn-dark btn-sm' %></td>
+          <td><%= link_to 'Continue Responding', edit_questionnaire_response_path(response), class: 'btn btn-dark btn-sm' %></td>
+        </tr>
+      <% end %>
+    <tbody>
+  </table>
+
+<% end %>
+
+<% if @historical_responses.present? %>
+
+  <h5 class="mt-5">Transferred Questionnaire Responses</h5>
+  <p>There are some questionnaire responses that you previously had access to that you have transferred to other users:</p>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th class="text-muted">Dataset Name</th>
+        <th class="text-muted">Date Created</th>
+        <th class="text-muted">Date Last Updated</th>
+        <th class="text-muted">Transferred To</th><tr>
+    </thead>
+    <tbody>
+      <% @historical_responses.each do |response| %>
+        <tr>
+          <td class="text-muted"><%= response.dataset_name %></td>
+          <td class="text-muted"><%= response.created_at.to_formatted_s(:long) %></td>
+          <td class="text-muted"><%= response.updated_at.to_formatted_s(:long) %></td>
+          <td class="text-muted"><%= response.user_email %></td>
+        </tr>
+      <% end %>
+    <tbody>
+  </table>
+<% end %>
+
+<% if @deleted_responses.present? %>
+
+  <h5 class="mt-5">Deprecated Questionnaire Responses</h5>
+  <p>There are some questionnaire responses that are not compatible with the current version of the questionnaire:</p>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th class="text-muted">Dataset Name</th>
+        <th class="text-muted">Date Created</th>
+        <th class="text-muted">Date Last Updated</th>
+    </thead>
+    <tbody>
+      <% @deleted_responses.each do |response| %>
+        <tr>
+          <td class="text-muted"><%= response.dataset_name %></td>
+          <td class="text-muted"><%= response.created_at.to_formatted_s(:long) %></td>
+          <td class="text-muted"><%= response.updated_at.to_formatted_s(:long) %></td>
+        </tr>
+      <% end %>
+    <tbody>
+  </table>
+<% end %>
