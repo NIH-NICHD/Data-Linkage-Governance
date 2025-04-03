@@ -23,6 +23,7 @@ These project materials and resources will help researchers and data stewards en
 * A metadata schema to annotate data governance information relevant to accessing, sharing, linking, and using individual-level participant data. For documentation, visit the [Data Governance Metadata Schema User Guide](MetadataSchema).
 
 * A report of considerations for linking datasets in a federated data ecosystem based on findings from existing record linkage implementations. For the full report, visit [Privacy Preserving Record Linkage (PPRL) for Pediatric COVID-19 Studies](https://www.nichd.nih.gov/sites/default/files/inline-files/NICHD_ODSS_PPRL_for_Pediatric_COVID-19_Studies_Public_Final_Report_508.pdf).
+    *  The report led to the creation of the [Record Linkage Implementation Checklist](https://github.com/NIH-NICHD-Ecosystem/E2_Record-Linkage-Implementation-Checklist/blob/main/README.md), which guides users through governance and technical     decisions that must be made prior to designing and implementing a record linkage strategy.
 
 * A landscape analysis that identifies existing governance-relevant standards that could be used in a data governance metadata schema. For the full report, visit the [Governance Metadata Standards: Landscape and Gap Analysis](https://www.nichd.nih.gov/sites/default/files/inline-files/Governance_Metadata_Standards_FINAL_revb.pdf).
   
