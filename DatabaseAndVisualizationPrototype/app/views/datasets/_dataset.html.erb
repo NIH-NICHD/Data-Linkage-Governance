@@ -1,0 +1,87 @@
+<h3>Dataset: <%= dataset.name %></h3>
+
+<div class="bg-body-tertiary border rounded-3 p-3 mb-3">
+  <b>Source:</b> <%= dataset.source %><br/>
+  <b>Source Agency:</b> <%= dataset.source_agency %><br/>
+  <b>Dataset type:</b> <%= dataset.dataset_type %><br/>
+  <b>Information Sources:</b> <%= dataset.information_sources.join('; ') %><br/>
+  <b>PII Elements Collected:</b> <%= dataset.pii_elements.join(', ') %><br/>
+  <b>PII Elements Holder:</b> <%= dataset.pii_elements_holder %><br/>
+  <b>Use of Common Data Model:</b> <%= dataset.common_data_model %><br/>
+</div>
+
+<h3>Policies</h3>
+
+<% dataset.policies.each do |policy| %>
+  <div class="bg-body-tertiary border rounded-3 p-3 mb-3">
+    <h4><%= policy.type %>:</b> <%= policy.name %></h4>
+    <% if policy.required_policies.count > 0 %>
+      <b>Requires:</b>
+      <%= policy.required_policies.map(&:name).join(', ') %></br>
+    <% end %>
+    <% if policy.requiring_policies.count > 0 %>
+      <b>Required By:</b>
+      <%= policy.requiring_policies.map(&:name).join(', ') %></br>
+    <% end %>
+    <% policy.rules.each do |rule| %>
+      <b>Rule:</b><br/>
+      <div class='rule'>
+        <b>Type:</b> <%= rule.type %><br/>
+        <b>Action:</b> <%= rule.action %><br/>
+        <% rule.functions.pluck(:type).uniq.each do |function_type| %>
+          <b><%= function_type.camelize %>:</b> <%= rule.get_parties(function_type).map(&:name).join(', ') %></br>
+        <% end %>
+        <% rule.constraints.each do |constraint| %>
+          <b>Constraint:</b>
+          <%= constraint.left_operand %>
+          <%= constraint.operator %>
+          <%= constraint.right_operand %><br/>
+        <% end %>
+        <% rule.duties.each do |duty| %>
+          <b>Duty:</b><br/>
+          <div class="rule">
+            <b>Action:</b> <%= duty.action %><br/>
+            <% duty.functions.pluck(:type).uniq.each do |function_type| %>
+              <b><%= function_type.camelize %>:</b> <%= duty.get_parties(function_type).map(&:name).join(', ') %></br>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class='policy_commentary'>
+        <b>Commentary:</b>
+        <% rule.policy_commentaries.each do |commentary| %>
+          <div class='policy_commentary_contents'>
+            <b>Lifecycle:</b> <%= commentary.data_lifecycle.name %><br/>
+            <b>Language:</b> <%= commentary.language.to_s.truncate_words(20).gsub(',...', '...') %><br/>
+            <b>Interpretation:</b> <%= commentary.interpretation %><br/>
+            <% if commentary.sources.present? %>
+              <% commentary.sources.each do |source| %>
+                <b>Source:</b>
+                <%= source.link ? link_to(source.name || source.link, source.link) : source.name %>
+                <%= source.accessed_on ? " (Accessed: #{source.accessed_on})" : '' %><br/>
+              <% end %>
+            <% else %>
+              <b>Source:</b> None<br/>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <pre class="policy_yaml"><%= policy.to_example_yaml %></pre>
+  </div>
+<% end %>
+
+<hr/>
+
+<h2>Prior Linkages</h2>
+<% if dataset.prior_linkages.blank? %>
+  <p>None</p>
+<% end %>
+<% dataset.prior_linkages.each do |pl| %>
+  <% ["dataset_name", "dataset_type", "dataset_source", "methodology", "pii_elements", "entity_resolver", "performing_party",
+     "quality_assessment", "data_sharing_method"].each do |attribute| %>
+    <% value = pl[attribute].is_a?(Array) ? pl[attribute].join(', ') : pl[attribute] %>
+    <b><%= attribute.titleize %>:</b> <%= value %><br/>
+  <% end %>
+  <br/>
+<% end %>

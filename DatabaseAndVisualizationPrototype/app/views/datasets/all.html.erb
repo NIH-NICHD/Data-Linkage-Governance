@@ -1,0 +1,5 @@
+<% @datasets.each do |dataset| %>
+  <%= render partial: "dataset", locals: { dataset: dataset } %>
+<% end %>
+
+<%= link_to 'Back', root_path %>
