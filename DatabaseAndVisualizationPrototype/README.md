@@ -14,6 +14,29 @@ repository includes the following:
 * **Database** – An instantiation of the data model as a relational database schema that can be loaded with governance metadata from 11 HHS clinical and administrative datasets.
 * **Query Tool** – A demonstration of simple database querying capabilities allowing governance metadata for the 11 datasets to be viewed.
 * **Visualization Prototype** – More advanced visualization capabilities intended to support linkage determination for the 11 datasets.
+      <details><summary>Expand the following toggle arrows to view screenshots of the Visualization Prototype:</summary>
+      <details><summary>Home Page</summary>
+      ![Home Page](https://github.com/user-attachments/assets/e1d8d9b0-0624-4b6d-8937-4f76a2f9bb55)
+      </details>
+      <details><summary>Select Datasets Page</summary>
+      ![Select Datasets Page](https://github.com/user-attachments/assets/2a137f1c-9246-4adf-8fab-aa2374ca9bab)
+      </details>
+      <details><summary>Compare Governance Page, Collapsed View</summary>
+      ![Compare Governance Page, Collapsed View](https://github.com/user-attachments/assets/54ca3c04-b134-4cd8-86f5-94d1179259ee)
+      </details>
+      <details><summary>Compare Governance Page, Expanded View</summary>
+      ![Compare Governance Page, Expanded View](https://github.com/user-attachments/assets/55e4d466-df7b-4ad6-b555-deb1b880fd86)
+      </details>
+      <details><summary>Compare Governance Page, Policy Detail View</summary>
+      ![Compare Governance Page, Policy Detail View](https://github.com/user-attachments/assets/73aefbe4-4d76-4bb8-9973-07ac47f208fd)
+      </details>
+      <details><summary>Assess Linkage Feasibility Page</summary>
+      ![Assess Linkage Feasibility Page](https://github.com/user-attachments/assets/e395b632-965d-4f18-a1d7-7b467b218645)
+      </details>
+      <details><summary>View Action Steps Page</summary>
+      ![View Action Steps Page](https://github.com/user-attachments/assets/53ed5584-d722-4d5c-aa12-cef95c5f9e83)
+      </details>
+</details>
 
 # Developer Notes
 
