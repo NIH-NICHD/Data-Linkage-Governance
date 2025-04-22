@@ -31,9 +31,7 @@ These project materials and resources will help researchers and data stewards en
 
 * A [governance data collection tool](MetadataCollectionTool) to enable researchers or other stakeholders to enter, store, and communicate dataset-level consent, policy, regulatory, and other governance information as metadata in a standard format to inform decisions about data linkages. For a report on tool development, visit [Development of a Governance Metadata Collection Tool](https://github.com/NIH-NICHD/Data-Linkage-Governance/tree/main/MetadataCollectionTool).
 
-* A [relational database and query tool](DatabaseAndVisualizationPrototype) that encodes and makes available governance metadata from the 11 high-priority HHS and other federally funded clinical and administrative datasets, providing a demonstration of how governance information may be annotated as metadata.
-
-* A [data governance visualization prototype](DatabaseAndVisualizationPrototype) that displays governance information at the dataset level to support decision making about linking datasets for research. For a report on prototype development, visit [Development of a Governance Metadata Visualization Prototype](https://www.nichd.nih.gov/sites/default/files/inline-files/NICHD_ODSS_Metadata_Viz_Prototype_Implementation_Report.pdf).
+* A [data governance visualization prototype](DatabaseAndVisualizationPrototype) that displays governance information at the dataset level to support decision making about linking datasets for research. The prototype is built on a relational database that encodes governance metadata from the 11 high-priority HHS and other federally funded clinical and administrative datasets and provides a demonstration of how governance information may be annotated as metadata. For a report on database and visualization prototype development, visit [Development of a Governance Metadata Visualization Prototype](https://www.nichd.nih.gov/sites/default/files/inline-files/NICHD_ODSS_Metadata_Viz_Prototype_Implementation_Report.pdf).
 
 
 ## Contact Information
